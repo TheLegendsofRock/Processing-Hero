@@ -1,3 +1,4 @@
+// this whole day I've been creating the writing font for game over, start, processing hero, etc. It was fun. And I worked.
 int g=50;
 void setup() {
   size(750, 800);
