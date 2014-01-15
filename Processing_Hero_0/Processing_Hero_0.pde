@@ -1,7 +1,9 @@
 int g=50;
 boolean shark, ant, koala;
+Animals wild;
 void setup() {
   size(750, 700); //Working: might change to 800 later, that just doesn't fit right on my computer
+  wild = new Animals();
 }
 void draw() {
   colorMode(HSB, 360, 100, 100, 100);
@@ -23,6 +25,12 @@ void draw() {
   
   //for (int l =0; l<=350; l+=175/2) {
   //  line(
+  koala = false;
+  shark = false;
+  ant = true;
+  wild.load();
+  wild.play();
+  //  scale(1);
 }
 /*Music Ideas: in four chords
 G D Em C or C G Am F
