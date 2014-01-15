@@ -31,10 +31,8 @@ You're Beautiful by James Blunt
 I'm Yours by Jason Mraz
 Where is the Love by Black Eyed Peas
 She Will be Loved by Maroon Five
-Fort Minor by Where'd You Go
-Love on the Internet by Rex Hermogino
+Where'd You Go by Fort Minor
 Happy Ending by Mika
-Let It Be by the Beatles
 Under the Bridge by Red Hot Chili Peppers
 Man in the Mirror by Michael Jackson
 Take on Me by a-ha
@@ -55,5 +53,23 @@ What It's Like by Everlast (acoustic song)
 
 all from http: //www.youtube. com/watch?v=DEkPC-6Ni8Y
 http://www.youtube.com/watch?v=oOlDewpCfZQ
+
+ STRONGER CONTENDERS
+ a Beatles song for acouistic. Let It Be has 4 chords.
+ If I Lose Myself by OneRepublic
+ I Will Wait by Mumford & Sons or other song
+ Millionaires by The Script
+ Hotel California by The Eagles, I think
+ Sweet Home Alabama
+ Dream On
+ More Than a Feeling
+ Fallen by Imagine Dragons
+ Let Her Go (has 5 chords I think)
+ Chasing Cars, Demons, It's Time may be too repetative/ simple.
+ 
+ HOW THIS WILL WORK:
+ Each key plays a chord. Need recordings of chords to play as sudio.
+ 
+ Bohemian Rhapsody during character selection
 */
 
