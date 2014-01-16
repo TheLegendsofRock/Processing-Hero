@@ -1,6 +1,13 @@
-int g=50;
+Gameover g1;
+Notes[] n = new Notes[100];
+int g=50; 
+int score=-25;
 void setup() {
   size(750, 800);
+  g1= new Gameover();
+   for (int i = 0; i < n.length; i++) {
+    n[i] = new Gameover();
+}
 }
 void draw() {
   colorMode(HSB,360,100,100,100);
@@ -32,3 +39,7 @@ quad(165, height, width/3, height/2-2*g, width*2/3, height/2-2*g, width-165, hei
   //  line(
 }
 // here's the font http://www.dafont.com/nightmare-hero.font
+if score<= -25(){
+  
+}
+  
