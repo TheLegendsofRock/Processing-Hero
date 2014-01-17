@@ -31,19 +31,19 @@ class Animals {
       st = loadImage("shark_tail.png");
       sf = loadImage("shark_fin.png");
       sh = loadImage("shark_hand.png");
-      sd.resize(0,160);
-      sb.resize(0,285);
-      st.resize(0,235);
-      sf.resize(0,125);
-      sh.resize(0,65);
-      rsd = loadImage("rshark_b.ng");
+      sd.resize(0,240);
+      sb.resize(0,428);
+      st.resize(0,353);
+      sf.resize(0,188);
+      sh.resize(0,98);
+      rsd = loadImage("rshark_b.png");
       rsf = loadImage("rshark_fin.png");
       rsh = loadImage("rshark_hand.png");
       rst = loadImage("rshark_tail.png");
-      rsd.resize(0,315);
-      rsf.resize(0,109);
-      rsh.resize(0,80);
-      rst.resize(0,158);
+      rsd.resize(0,473);
+      rsf.resize(0,164);
+      rsh.resize(0,120);
+      rst.resize(0,237);
     }
     if (koala == true) {
       kb = loadImage("koala_body.png");
@@ -73,11 +73,12 @@ class Animals {
       image(am, width/3, height/2 - 60);
     }
     if (shark == true) {
-      image(sd, width/3, height/2);
-      image(sb, width/3, height/2);
-      image(st, width/3, height/2);
-      image(sf, width/3, height/2);
-      image(sh, width/3, height/2);
+      image(sb, width/3, height/2-100);
+
+      image(st, width/3, height/2+125);
+      image(sf, width/3+75, height/2-125);
+            image(sd, width/3+25, height/2-250);
+      image(sh, width/3+250, height/2-175);
     }
     if (koala == true) {
       image(kb, width/3, height/2);
