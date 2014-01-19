@@ -8,7 +8,7 @@ class Animals {
      t is for tail (shark), r is for rockin.*/
   }
   void load() {
-    imageMode(CENTER);
+
     if (ant == true) {
       ad = loadImage("ant_head.png");
       am = loadImage("ant_m.png");
@@ -31,45 +31,50 @@ class Animals {
       st = loadImage("shark_tail.png");
       sf = loadImage("shark_fin.png");
       sh = loadImage("shark_hand.png");
-      sd.resize(0,240);
-      sb.resize(0,428);
-      st.resize(0,353);
-      sf.resize(0,188);
-      sh.resize(0,98);
+      sd.resize(0, 240);
+      sb.resize(0, 428);
+      st.resize(0, 353);
+      sf.resize(0, 188);
+      sh.resize(0, 98);
       rsd = loadImage("rshark_b.png");
       rsf = loadImage("rshark_fin.png");
       rsh = loadImage("rshark_hand.png");
       rst = loadImage("rshark_tail.png");
-      rsd.resize(0,473);
-      rsf.resize(0,164);
-      rsh.resize(0,120);
-      rst.resize(0,237);
+      rsd.resize(0, 473);
+      rsf.resize(0, 164);
+      rsh.resize(0, 120);
+      rst.resize(0, 237);
     }
     if (koala == true) {
       kb = loadImage("koala_body.png");
       kh = loadImage("koala_head.png");
       kd = loadImage("koala_hand.png");
       kf = loadImage("Koala_r.png");
-      kb.resize(0,397);
-      kd.resize(0,145);
-      kh.resize(0,66);
-      kf.resize(0,150);
+      kb.resize(0, 397);
+      kd.resize(0, 145);
+      kh.resize(0, 66);
+      kf.resize(0, 150);
       rkb = loadImage("rk_body.png");
       rkh = loadImage("rk_hand.png");
       rkd = loadImage("rk_head.png");
       rkf = loadImage("rk_r.png");
-      rkb.resize(0,607);
-      rkh.resize(0,102);
-      rkd.resize(0,291);
+      rkb.resize(0, 607);
+      rkh.resize(0, 102);
+      rkd.resize(0, 291);
       rkf.resize(0, 227);
     }
   }
-  void play() { //for guitar G. will make rotate/ shake randomly.
+  void play() {
+    imageMode(CENTER); //for guitar G. will make rotate/ shake randomly.
     if (ant == true) {
-      //  scale(1/2);
       image(ab, width/3-20, height/2+75);
+      //Working: make them move some other time (pushMatrix, translate, rotate, popMatrix)
       //G
-      image(ad, width/3+90, height/2 - 220);
+            pushMatrix();
+            translate( width/3+90, height/2 - 220);
+            rotate(radians(angle));
+      image(ad, 0,0);
+            popMatrix(); //okay, it's really creepy right now, but I'm just happy it's moving. Whoopie!
       image(am, width/3, height/2 - 60);
     }
     if (shark == true) {
@@ -77,7 +82,7 @@ class Animals {
 
       image(st, width/3, height/2+125);
       image(sf, width/3+75, height/2-125);
-            image(sd, width/3+25, height/2-250);
+      image(sd, width/3+25, height/2-250);
       image(sh, width/3+250, height/2-175);
     }
     if (koala == true) {
@@ -88,6 +93,7 @@ class Animals {
     }
   }
   void winning() {
+    imageMode(CENTER);
     if (ant == true) {
       image(rab, width/3, height/2+75);
       image(ram, width/3+55, height/2+55);
