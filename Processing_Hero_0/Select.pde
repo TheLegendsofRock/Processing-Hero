@@ -1,4 +1,4 @@
-class Select {
+class Select { //select characters
   Select() {
     boolean shark, ant, koala;
   }
