@@ -70,11 +70,11 @@ class Animals {
       image(ab, width/3-20, height/2+75);
       //Working: make them move some other time (pushMatrix, translate, rotate, popMatrix)
       //G
-            pushMatrix();
-            translate( width/3+90, height/2 - 220);
-            rotate(radians(angle));
-      image(ad, 0,0);
-            popMatrix(); //okay, it's really creepy right now, but I'm just happy it's moving. Whoopie!
+      pushMatrix();
+      translate( width/3+90, height/2 - 220);
+      rotate(radians(angle));
+      image(ad, 0, 0);
+      popMatrix(); //okay, it's really creepy right now, but I'm just happy it's moving. Whoopie!
       image(am, width/3, height/2 - 60);
     }
     if (shark == true) {
