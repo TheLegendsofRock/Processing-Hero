@@ -1,6 +1,8 @@
 class Select { //select characters
   Select() {
-    boolean shark, ant, koala;
+    shark = false;
+    ant = false;
+    koala = false;
   }
   void display() {
     //display images of shark, ant koala

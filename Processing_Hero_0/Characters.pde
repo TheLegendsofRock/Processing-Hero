@@ -1,4 +1,5 @@
 class Animals {
+  int angle = 0; //Working movement
   PImage ad, am, ab, rad, ram, rah, rab;
   PImage sd, sb, st, sf, sh, rsd, rsf, rsh, rst;
   PImage kb, kh, kd, kf, rkb, rkh, rkd, rkf;
@@ -6,7 +7,7 @@ class Animals {
     /*a is for ant, d is for head, b is for bottom (ant) or body (all others), 
      m is for middle (ant), h is for strumming hand, f is for fin (shark),
      t is for tail (shark), r is for rockin.*/
-     //Working: still need to add better movement
+    //Working: still need to add better movement
   }
   void load() {
 
