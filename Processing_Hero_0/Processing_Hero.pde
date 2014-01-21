@@ -4,9 +4,13 @@ Animals wild;
 Music[] m = new Music[200];
 boolean run;
 boolean ant, koala, shark;
+int current;
+int change;
+int old = 0;
+int index = 0;
 
 void setup() {
-  size(750, 600); //Working: I keep changing this to 600 so it fits on my screen. Change it back to 800 if I forget to.
+  size(750, 800); //Working: I keep changing this to 600 so it fits on my screen. Change it back to 800 if I forget to.
   wild = new Animals();
   strokeWeight(3);
   colorMode(HSB, width, 100, 100);
@@ -17,8 +21,20 @@ void setup() {
 }
 void draw() {
   if (run == true) {
-    background(150);     
-
+    background(150);   
+    //music notes start screen timer
+    current = millis();
+    change = current - old;
+    for (int i = 0; i < index; i++) {
+      m[i].display();
+      m[i].drop();
+    }
+    if (change >= 1000) {        
+      old = current;
+      if (index < m.length) {
+        index++;
+      }
+    }  
     noFill();
     stroke(0);
     strokeWeight(2);
