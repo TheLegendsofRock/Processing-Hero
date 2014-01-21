@@ -1,3 +1,4 @@
+//working: how do we cut down on load time?
 Startscreen s1;
 Animals wild;
 Music[] m = new Music[200];
@@ -41,7 +42,7 @@ void draw() {
     wild.play();
   }
   else {
-    //says if run isn't true, then flash is true, and if flash is true, display the start screen
+    s1.display();
   }
 }
 
