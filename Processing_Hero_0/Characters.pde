@@ -9,8 +9,6 @@ class Animals {
      m is for middle (ant), h is for strumming hand, f is for fin (shark),
      t is for tail (shark), r is for rockin.*/
     //Working: still need to add better movement
-  }
-  void load() {
 
     if (ant == true) {
       ad = loadImage("ant_head.png");
