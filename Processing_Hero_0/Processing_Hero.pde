@@ -3,6 +3,7 @@ Startscreen s1;
 Animals wild;
 Music[] m = new Music[200];
 Select ion;
+Guitar gui;
 boolean start = true;
 boolean select = false;
 boolean guit = false;
@@ -14,6 +15,8 @@ int change;
 int old = 0;
 int index = 0;
 
+int numClicks;
+
 void setup() {
   size(750, 800); //Working: I keep changing this to 600 so it fits on my screen. Change it back to 800 if I forget to.
   wild = new Animals();
@@ -24,6 +27,7 @@ void setup() {
   for (int i = 0; i < m.length; i++) {
     m[i] = new Music();
   }
+  gui = new Guitar();
   koala = false;
   shark = false;
   ant = false;
@@ -50,6 +54,7 @@ void draw() {
     ion.mouseOver();
   }
   if (guit == true) {
+    gui.display();
   }
   if (songs == true) {
   }
@@ -74,4 +79,7 @@ void keyPressed() {
     }
   }
 }
+void mousePressed() {
+  numClicks += 1;
+} //WHOOHOO GUESS WHO LOOKED UP A GREAT WAY TO MAKE MULTIPLE KEY PRESSES MEAN DIFFERENT THINGS AND THISLL PROBABLY OPEN UP A FEW BUGS BUT IT WORKS RIGHT NOW SO YAAAAAY KRISTIEE.
 

@@ -13,6 +13,7 @@ class Startscreen {
     guitar = loadImage("black_guitar.png");
     sign = loadImage("Processing_hero_white.png");
     play = loadImage("Play_rock.png");
+        numClicks = 0;
   }
   void display () {
     //makes background rainbow
@@ -31,7 +32,7 @@ class Startscreen {
     //    noFill();
     //                 rect(width/8-20,height/2,835/3,219);
     //                 //the location I want for mouseX,Y stuff
-    if (mousePressed) {
+    if (numClicks == 1) {
       //if you click "i wanna rock" the game will start
 
       if (mouseX <= width/2 && mouseX>= width/2-(835*3/4)/2 && mouseY <= height/1.5+219/2 && mouseY >= height/1.5-219/2) {
