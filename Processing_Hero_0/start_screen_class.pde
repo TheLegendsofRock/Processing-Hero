@@ -35,30 +35,32 @@ class Startscreen {
       //if you click "i wanna rock" the game will start
 
       if (mouseX <= width/2 && mouseX>= width/2-(835*3/4)/2 && mouseY <= height/1.5+219/2 && mouseY >= height/1.5-219/2) {
-        //        run = true;
-
         ellipse(mouseX, mouseY, 10, 10);
+        start = false;
+        select = true;
       }
     }
   }
 }
 
-  class Music {
-    PVector loc, vel, acc;
-    int d;
-    PImage music;
-    Music () {
-      music = loadImage("winged_note.png");
-      d = 100;
-      loc = new PVector(random(0, width-d/2), -d);
-      vel = new PVector(0, random(5, 10));
-      acc = new PVector(random(-.05, .05), .05);
-    }
-    void display () {
-      image(music, loc.x, loc.y, d, d);
-    }
-    void drop() {
-      loc.add(vel);
-      vel.add(acc);
-    }
+class Music {
+  PVector loc, vel, acc;
+  int d;
+  int s=3/8;
+  PImage music;
+  Music () {
+    music = loadImage("winged_note.png");
+    d = 100;
+    loc = new PVector(random(0, width-d/2), -d);
+    vel = new PVector(0, random(5, 10));
+    acc = new PVector(random(-.05, .05), .05);
   }
+  void display () {
+    image(music, loc.x, loc.y, 325*s, 686*s);
+  }
+  void drop() {
+    loc.add(vel);
+    vel.add(acc);
+  }
+}
+

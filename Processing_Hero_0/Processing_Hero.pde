@@ -2,7 +2,12 @@
 Startscreen s1;
 Animals wild;
 Music[] m = new Music[200];
-boolean run;
+Select ion;
+boolean start = true;
+boolean select = false;
+boolean guit = false;
+boolean songs = false;
+boolean run = false;
 boolean ant, koala, shark;
 int current;
 int change;
@@ -15,13 +20,17 @@ void setup() {
   strokeWeight(3);
   colorMode(HSB, width, 100, 100);
   s1 = new Startscreen();
+  ion = new Select();
   for (int i = 0; i < m.length; i++) {
     m[i] = new Music();
   }
+  koala = false;
+  shark = false;
+  ant = false;
 }
 void draw() {
-  if (run == true) {
-    background(150);   
+  if (start == true) {
+    s1.display();
     //music notes start screen timer
     current = millis();
     change = current - old;
@@ -34,36 +43,25 @@ void draw() {
       if (index < m.length) {
         index++;
       }
-    }  
-    noFill();
-    stroke(0);
-    strokeWeight(2);
-    rectMode(CENTER);
-    rect(width/2, height/2, width/2, height);
-    for (int i = 0; i < 4; i++) {
-      stroke(200);
-      strokeWeight(5);
-      line(220+i*105, height, 220+i*105, 0);
-      noStroke();
-      int c = 30*i;
-      fill(c+15, 100, 100);
-      ellipse(220+i*105, height-35, 105, 90);
-      fill(c, 100, 100);
-      ellipse(220+i*105, height-35, 85, 70);
     }
-    koala = false;
-    shark = false;
-    ant = true;
+  }
+  if (select == true) {
+    ion.display();
+    ion.mouseOver();
+  }
+  if (guit == true) {
+  }
+  if (songs == true) {
+  }
+  if (run == true) {
     wild.load();
     wild.play();
   }
-  else {
-    s1.display();
-  }
 }
 
+
 void keyPressed() {
-  if (run == true) {
+  if (start == true) {
     if (key == ' ') {
     }
     if (key == 'h') {

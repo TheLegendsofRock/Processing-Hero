@@ -2,6 +2,8 @@
 class Guitar {
   Guitar() {
   }
+  void display(){
+    background(0);
+  }
 }
-//Working: Emma, the picture you sent was in a word doc, and that may have undone any remove background work that you did. I need another pic if it doesn't work.
 

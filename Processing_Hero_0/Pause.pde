@@ -3,7 +3,7 @@ class Pause { //whenever spacebar pressed when run == true.
   Pause() {
   }
   void display() {
-    background(255,50);
+    background(355, 90, 75, 50);
   }
 }
 
