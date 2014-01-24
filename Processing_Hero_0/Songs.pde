@@ -19,18 +19,26 @@ class Songs {
           run = true;
           sing = false;
         }
-      }
-      if (mouseX<width/2) {
-        image(white, width/4, height/2, 403, 400);
-        image(blue, width*3/4, height/2);
-        white.resize(603, 600);
-        if (numClicks==4) {
-          song1 = true;
-          run = true;
-          sing = false;
+      } 
+      else
+        if (mouseX<width/2) {
+          image(white, width/4, height/2, 403, 400);
+          image(blue, width*3/4, height/2);
+          white.resize(603, 600);
+          if (numClicks==4) {
+            song1 = true;
+            run = true;
+            sing = false;
+          }
         }
-      }
+        else {
+          image(white, width/4, height/2);
+          image(blue, width*3/4, height/2);
+        }
     }
+  }
+  void mouseOver() {
+    
   }
 }
 

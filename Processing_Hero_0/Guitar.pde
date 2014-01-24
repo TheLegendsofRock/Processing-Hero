@@ -20,7 +20,6 @@ class Guitar {
     flame.resize(95, 115);
   }
   void display() {
-    imageMode(CENTER);
     background(bg);
     image(gaco, 130, height/2);
     image(gele, width/2, height/2);
