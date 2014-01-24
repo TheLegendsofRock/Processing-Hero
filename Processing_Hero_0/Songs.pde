@@ -8,34 +8,29 @@ class Songs {
     blue = loadImage("blue_record.png");
     blue.resize(300, 300);
   }
-  void display() {
+  void display() { //Emma: another issue. it doesn't enlarge when mouse over. Also, clicking isn't working yet.
     background(0);
-    pushMatrix();
-    scale(enlarge);
-    translate(width*3/4, height/2);
-    image(blue, 0, 0);
-    if (mouseX>width/2) {
-      enlarge=2;
-      if (numClicks==4) {
-        song2 = true;
-        run = true;
-        sing = false;
+    if (mouseY<=height-50 && mouseY>=50) {
+      if (mouseX>width/2) {
+        image(white, width/4, height/2);
+        image(blue, width*3/4, height/2, 400, 400);
+        if (numClicks==4) {
+          song2 = true;
+          run = true;
+          sing = false;
+        }
+      }
+      if (mouseX<width/2) {
+        image(white, width/4, height/2, 403, 400);
+        image(blue, width*3/4, height/2);
+        white.resize(603, 600);
+        if (numClicks==4) {
+          song1 = true;
+          run = true;
+          sing = false;
+        }
       }
     }
-    popMatrix();
-    pushMatrix();
-    translate(width/4, height/2);
-    scale(enlarge);
-    image(white, 0, 0);
-    if (mouseX<width/2) {
-      enlarge=2;
-      if (numClicks==4) {
-        song1 = true;
-        run = true;
-        sing = false;
-      }
-    }
-    popMatrix(); //Emma: another bug. It's not enlarging as I'd like it to. the guitar pick just shows up all strangely.
   }
 }
 

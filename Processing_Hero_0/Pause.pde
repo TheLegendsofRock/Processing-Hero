@@ -4,9 +4,10 @@ class Pause { //whenever spacebar pressed when run == true.
   }
   void display() {
     if (pause == true) { //instructions screen
-      background(355, 90, 75, 50);
+//      rect(355, 90, 75, 50,width,height);
     }
     else { //game play
+    background(0);
       noFill();
       stroke(0);
       strokeWeight(2);

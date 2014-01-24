@@ -37,10 +37,11 @@ PImage tongue;
 
 void setup() {
   imageMode(CENTER);
-  size(750, 800); //Working: I keep changing this to 600 so it fits on my screen. Change it back to 800 if I forget to.
-  wild = new Animals();
-  strokeWeight(3);
+  rectMode(CENTER);
   colorMode(HSB, width, 100, 100);
+  textAlign(CENTER);
+  size(750, 800); //Working: I keep changing this to 600 so it fits on my screen. Change it back to 800 if I forget to.
+  strokeWeight(3);
   s1 = new Startscreen();
   ion = new Select();
   for (int i = 0; i < m.length; i++) {
@@ -48,6 +49,7 @@ void setup() {
   }
   gui = new Guitar();
   songs = new Songs();
+  wild = new Animals();
   koala = false;
   shark = false;
   ant = false;
@@ -103,14 +105,30 @@ void draw() {
 void keyPressed() {
   if (start == true) {
     if (key == ' ') {
+      fill(13, 85, 95, 75);
+      rect(width/2, height/2, width, height);
+      fill(255, 95);
+      textSize(50);
+      text("H     J     K     L", width/2, height-20);
+      fill(23, 85, 95, 50);
+      stroke(33, 85, 95, 50);
+      rect(width/2, height/2, width*2/3, height/8, 10);
+      textSize(30);
+      fill(255, 200);
+      text("SPACE\nrock on/rock off", width/2, height/2-13);
+      text("press the keys as the falling circles reach 'em", width/2, 100);
     }
     if (key == 'h') {
+      image(tongue, 220, height);
     }
     if (key == 'j') {
+      image(tongue, 370, height);
     }
     if (key == 'k') {
+      image(tongue, 520, height);
     }
     if (key == 'l') {
+      image(tongue, 670, height);
     }
   }
 }
