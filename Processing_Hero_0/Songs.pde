@@ -12,9 +12,26 @@ class Songs {
     background(0);
     image(white, width/4, height/2);
     image(blue, width*3/4, height/2);
-  }
-  //    loop();
+    textSize(25);
+    fill(175, width, 100); //Working: Emma: I don't know what's up with the fill. i thought this was cyan, but it's red.
+    if ( aco == true || raco == true) {
+      text("Counting Stars\nOneRepublic", width*3/4, height/2);
+    } 
+    //    else {
+    if (ele == true || rele == true) {
+      text("I Knew You Were Trouble\nTaylor Swift", width/4, height/2);
+      text("Johnny B. Goode\nChuck Berry", width*3/4, height/2);
+      //      }
+    } 
+    //    else { //will this cut down on load time? because it's unbearable.
+    if (uke == true || ruke == true) {
+      text("Hey, Soul Sister\nTrain", width/4, height/2);
+      text("Count On Me\nBruno Mars", width*3/4, height/2);
+    }
+    //    }
 
+    //    loop();
+  }
   void mouseOver() {
     if (mouseY<=height-50 && mouseY>=50) {
       if (mouseX>width/2) {

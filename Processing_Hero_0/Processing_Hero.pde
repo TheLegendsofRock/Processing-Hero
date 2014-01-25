@@ -93,8 +93,8 @@ void draw() {
       gui.display();
     }
     if (sing == true) {
-      songs.display();
       songs.mouseOver();
+      songs.display();
     }
     if (run == true) {
       wild.load();
