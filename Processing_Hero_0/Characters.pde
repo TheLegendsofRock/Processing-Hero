@@ -92,7 +92,7 @@ class Animals {
       image(kh, width/3, height/2);
       image(kd, width/3, height/2);
       image(kf, width/3, height/2);
-    }
+    } //well crud i guess i never did this. crud. All: can i get one of you to do this? and make them rotote/ randomly move slightly. please help me.
   }
   void winning() {
     imageMode(CENTER);
@@ -107,12 +107,14 @@ class Animals {
       image(rsf, width/3, height/2);
       image(rsh, width/3, height/2);
       image(rst, width/3, height/2);
+      //and this.
     }
     if (koala == true) {
       image(rkb, width/3, height/2);
       image(rkh, width/3, height/2);
       image(rkd, width/3, height/2);
       image(rkf, width/3, height/2);
+      //and finally this one. that's it. I can send docs where the pics are in proper proportions and distance to eachother.
     }
   }
 }

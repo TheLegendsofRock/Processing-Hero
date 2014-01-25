@@ -1,4 +1,4 @@
-//All: search for your names or all for specific instructions.
+//klllllllllllllllllllllllllllllllllllllllllllllllAll: search for your names or all for specific instructions.
 //Sam: I don't know where your game over code is, or where the pics are for it. if you could go back through old commits or find the folder, please just copy and paste it because it must not have merged correctly.
 //Working: refining this to make it simpler. Moving to Processing_Hero
 //trying to get angle to increase, then decrease. I'll get it, someday.

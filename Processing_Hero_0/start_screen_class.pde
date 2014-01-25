@@ -25,7 +25,6 @@ class Startscreen {
       m[i].display();
       m[i].drop();
     }
-    imageMode(CENTER);
     image(guitar, width/2, height/1.5, 835*3/4, 219);
     image(sign, width/2, height/4, 750, 350);
     image(play, width/4, height/1.47, 240, 177);
@@ -34,7 +33,6 @@ class Startscreen {
     //                 //the location I want for mouseX,Y stuff
     if (numClicks == 1) {
       //if you click "i wanna rock" the game will start
-
       if (mouseX <= width/2 && mouseX>= width/2-(835*3/4)/2 && mouseY <= height/1.5+219/2 && mouseY >= height/1.5-219/2) {
         ellipse(mouseX, mouseY, 10, 10);
         start = false;

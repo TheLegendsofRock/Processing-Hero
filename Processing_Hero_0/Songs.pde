@@ -10,9 +10,14 @@ class Songs {
   }
   void display() { //Emma: another issue. it doesn't enlarge when mouse over. Also, clicking isn't working yet.
     background(0);
+    image(white, width/4, height/2);
+    image(blue, width*3/4, height/2);
+  }
+  //    loop();
+
+  void mouseOver() {
     if (mouseY<=height-50 && mouseY>=50) {
       if (mouseX>width/2) {
-        image(white, width/4, height/2);
         image(blue, width*3/4, height/2, 400, 400);
         if (numClicks==4) {
           song2 = true;
@@ -20,25 +25,16 @@ class Songs {
           sing = false;
         }
       } 
-      else
-        if (mouseX<width/2) {
-          image(white, width/4, height/2, 403, 400);
-          image(blue, width*3/4, height/2);
-          white.resize(603, 600);
-          if (numClicks==4) {
-            song1 = true;
-            run = true;
-            sing = false;
-          }
+      if (mouseX<width/2) {
+        image(white, width/4, height/2, 403, 400);
+        white.resize(603, 600);
+        if (numClicks==4) {
+          song1 = true;
+          run = true;
+          sing = false;
         }
-        else {
-          image(white, width/4, height/2);
-          image(blue, width*3/4, height/2);
-        }
+      }
     }
-  }
-  void mouseOver() {
-    
   }
 }
 

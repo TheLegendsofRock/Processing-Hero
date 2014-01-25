@@ -10,7 +10,7 @@ boolean start = true;
 boolean select = false;
 boolean guit = false;
 boolean sing = false;
-boolean pause; //true dat
+boolean pause = true; 
 boolean run = false;
 //Instrument types:
 boolean aco = false;
@@ -20,9 +20,9 @@ boolean rele = false;
 boolean uke = false;
 boolean ruke = false;
 //Character types:
-boolean ant = false;
-boolean koala = false; 
-boolean shark = false;
+boolean ant;
+boolean koala; 
+boolean shark;
 //Song types: define in guitar class.
 boolean song1 = false;
 boolean song2 = false;
@@ -94,6 +94,7 @@ void draw() {
     }
     if (sing == true) {
       songs.display();
+      songs.mouseOver();
     }
     if (run == true) {
       wild.load();
@@ -123,5 +124,5 @@ void keyPressed() {
 }
 void mousePressed() {
   numClicks += 1;
-} //WHOOHOO GUESS WHO LOOKED UP A GREAT WAY TO MAKE MULTIPLE KEY PRESSES MEAN DIFFERENT THINGS AND THISLL PROBABLY OPEN UP A FEW BUGS BUT IT WORKS RIGHT NOW SO YAAAAAY KRISTIEE.
+}//cuz now if click once wrong, lose any chance.
 
