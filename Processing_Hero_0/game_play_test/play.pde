@@ -33,7 +33,7 @@ class Play {
     if (pause == false) {
       //      y++;
     }
-    player.play();
+//    player.play();
   }
 }
 

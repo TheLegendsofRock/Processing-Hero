@@ -89,12 +89,34 @@ void draw() {
     play.display();
     if (pause == false) {
       music.playSong();
+      player.play();
       fallNotes.add(new FallNotes());
       for (int i = fallNotes.size()-1; i >=0; i--) {
         FallNotes f = fallNotes.get(i);
         f.display();
         f.update();
-        f.checkLoc();
+        if (keyPressed) {
+          if (key == 'H') {
+            if (f.loc.y<=10) {
+              fallNotes.remove(i);
+            }
+            if (key == 'J') {
+              if (f.loc.y<=10) {
+                fallNotes.remove(i);
+              }
+            }
+            if (key == 'H') {
+              if (f.loc.y<=10) {
+                fallNotes.remove(i);
+              }
+            }
+            if (key == 'H') {
+              if (f.loc.y<=10) {
+                fallNotes.remove(i);
+              }
+            } //Working: I don't know how to do this.
+          }
+        }
       }
     }
   }
@@ -131,7 +153,7 @@ void stop() { //OH MY GOODNESS GRACIOUS IT WOOOOORKS WHOOOOOHOOOOOOPS i don't re
   //  count.close();
   //  goode.close();
   //  soul.close();
-//  player.stop(); //says function stop() does not exist.
+  //  player.stop(); //says function stop() does not exist.
   minim.stop();
   super.stop();
 }
