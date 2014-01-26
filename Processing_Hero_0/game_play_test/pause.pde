@@ -4,7 +4,7 @@ class Pause { //whenever spacebar pressed when run == true.
   }
   void display() {
     noFill();
-    
+
     for (int i = 0; i < 4; i++) {
       stroke(200);
       strokeWeight(5);

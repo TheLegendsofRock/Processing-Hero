@@ -9,7 +9,8 @@ Minim minim;
 //AudioPlayer trouble;
 //AudioPlayer soul;
 AudioPlayer player;
-
+int score = 0; //ADD TO OTHER
+ArrayList<FallNotes> fallNotes = new ArrayList<FallNotes>(); //ADD TO OTHER
 Animals wild;
 Guitar gui;
 Pause play;
@@ -51,7 +52,7 @@ void setup() {
   //  soul = minim.loadFile("Train - Hey, Soul Sister.mp3", 2048);
   //  in = minim.getLineIn(Minim.STEREO, 512); //I don't know what any of this means. Emma, if you understand minim, please work on this.
   //  fft = new FFT(in.buffersize(), in.sampleRate());
-
+  fallNotes.add(new FallNotes()); //ADD TO OTHER
   imageMode(CENTER);
   size(750, 700); //Working: change back later; 
   colorMode(HSB, width, 100, 100);
@@ -76,13 +77,25 @@ void draw() {
   change = current - old; //ADD TO;
 
   if (run == true) {
-    background(25,width,5);
+    background(25, width, 5);
     wild.load(gui); //ADD TO OTHER
-    wild.winning(gui);
+    if (score>=2) {
+      wild.winning(gui); //if the score is high enough, a different character displays
+    } 
+    else {
+      wild.play(gui);
+    }
 
     play.display();
-    if(pause == false){
+    if (pause == false) {
       music.playSong();
+      fallNotes.add(new FallNotes());
+      for (int i = fallNotes.size()-1; i >=0; i--) {
+        FallNotes f = fallNotes.get(i);
+        f.display();
+        f.update();
+        f.checkLoc();
+      }
     }
   }
 }
@@ -118,7 +131,7 @@ void stop() { //OH MY GOODNESS GRACIOUS IT WOOOOORKS WHOOOOOHOOOOOOPS i don't re
   //  count.close();
   //  goode.close();
   //  soul.close();
-//  player.stop();
+//  player.stop(); //says function stop() does not exist.
   minim.stop();
   super.stop();
 }
