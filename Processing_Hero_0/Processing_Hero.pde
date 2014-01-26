@@ -36,6 +36,7 @@ int numClicks;
 PImage tongue;
 
 void setup() {
+  background(0);
   imageMode(CENTER);
   rectMode(CENTER);
   colorMode(HSB, width, 100, 100);

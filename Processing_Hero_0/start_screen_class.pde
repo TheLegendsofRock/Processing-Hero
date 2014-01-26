@@ -13,14 +13,16 @@ class Startscreen {
     guitar = loadImage("black_guitar.png");
     sign = loadImage("Processing_hero_white.png");
     play = loadImage("Play_rock.png");
-        numClicks = 0;
+    numClicks = 0;
   }
   void display () {
-    //makes background rainbow
-    for (int x=0; x< width; x+=20) {
-      fill(dist(mouseX, 100, x, 0), 100, 100);
-      rect(x, 0, width/8, height);
-    }
+    //    //makes background rainbow
+    //    for (int x=0; x< width; x+=20) {
+    //      fill(dist(mouseX, 100, x, 0), 100, 100);
+    //      rect(x, 0, width/8, height);
+    //    }
+    stroke(random(100), 94, 99);
+    line(width/2, height/2, random(width), random(height) );
     for (int i = 0; i < index; i++) {
       m[i].display();
       m[i].drop();
