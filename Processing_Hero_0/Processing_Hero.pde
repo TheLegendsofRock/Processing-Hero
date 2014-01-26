@@ -41,7 +41,8 @@ void setup() {
   rectMode(CENTER);
   colorMode(HSB, width, 100, 100);
   textAlign(CENTER);
-  size(750, 800); //Working: I keep changing this to 600 so it fits on my screen. Change it back to 800 if I forget to.
+  size(750, 800, P2D); //Working: I keep changing this to 600 so it fits on my screen. Change it back to 800 if I forget to.
+  //Keep getting ArrayIndexOutOfBoundsException: coordinate out of bounds! for the image(white under songs tab. Will this fix it?
   strokeWeight(3);
   s1 = new Startscreen();
   ion = new Select();
@@ -89,18 +90,21 @@ void draw() {
       if (key == 'g') {
         gui.extra();
       }
+      else {
+        gui.display();
+      }
     }
     else {
       gui.display();
     }
-    if (sing == true) {
-      songs.mouseOver();
-      songs.display();
-    }
-    if (run == true) {
-      wild.load();
-      wild.play();
-    }
+  }
+  if (sing == true) {
+    songs.mouseOver();
+    songs.display();
+  }
+  if (run == true) {
+    wild.load();
+    wild.play();
   }
 }
 

@@ -4,8 +4,8 @@ class Pause { //whenever spacebar pressed when run == true.
   }
   void display() {
     if (pause == true) { //instructions screen
-//      rect(355, 90, 75, 50,width,height);
-fill(13, 85, 95, 75);
+      //      rect(355, 90, 75, 50,width,height);
+      fill(13, 85, 95, 75);
       rect(width/2, height/2, width, height);
       fill(255, 95);
       textSize(50);
@@ -19,7 +19,7 @@ fill(13, 85, 95, 75);
       text("press the keys as the falling circles reach 'em", width/2, 100);
     }
     else { //game play
-    background(0);
+      background(0);
       noFill();
       stroke(0);
       strokeWeight(2);
@@ -39,3 +39,4 @@ fill(13, 85, 95, 75);
     }
   }
 }
+

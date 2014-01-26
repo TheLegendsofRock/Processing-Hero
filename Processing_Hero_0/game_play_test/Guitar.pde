@@ -29,7 +29,9 @@ class Guitar {
         image(flame, 130, height/2+50);
         if (numClicks == 3) {
           aco = true;
-//          sing = true;
+          //          sing = true;
+//          g = loadImage("acoustic_guitar.png"); //ADD TO OTHER
+//          g.resize(240, 615);
           guit = false;
         }
       }
@@ -37,7 +39,9 @@ class Guitar {
         image(flame, width/2, height/2+30);
         if (numClicks == 3) {
           ele = true;
-//          sing = true;
+          //          sing = true;
+//          g = loadImage("elect_guitar.png"); //ADD TO OTHER (2 LINES)
+//          g.resize(210, 615);
           guit = false;
         }
       }
@@ -45,7 +49,9 @@ class Guitar {
         image(flame, width-130, height/2+25);
         if (numClicks == 3) {
           uke = true;
-//          sing = true;
+          //          sing = true;
+//          g = loadImage("brown_uke.png");
+//          g.resize(110, 346); //ADD TO OTHER
           guit = false;
         }
       }
@@ -62,7 +68,9 @@ class Guitar {
         image(flame, 130, height/2+50);
         if (numClicks == 3) {
           raco = true;
-//          sing = true;
+          //          sing = true;
+//          g = loadImage("brown_guit.png");
+//          g.resize(210, 630); //ADD TO OTHER
           guit = false;
         }
       }
@@ -70,7 +78,9 @@ class Guitar {
         image(flame, width/2-40, height/2+30);
         if (numClicks == 3) {
           rele = true;
-//          sing = true;
+          //          sing = true;
+//          g = loadImage("elect_axe_guitar.png");
+//          g.resize(250, 620); //ADD TO OTHER
           guit = false;
         }
       }
@@ -78,7 +88,9 @@ class Guitar {
         image(flame, width-130, height/2+25);
         if (numClicks == 3) {
           ruke = true;
-//          sing = true;
+          //          sing = true;
+//          g = loadImage("black_uke.png"); //ADD TO OTHER
+//          g.resize(120, 350);
           guit = false;
         }
       }

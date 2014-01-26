@@ -27,25 +27,28 @@ class Guitar {
     if (mouseY<= height/2+200 && mouseY>= height/2-200) {
       if (mouseX>=30 && mouseX<=230) {
         image(flame, 130, height/2+50);
-        if (numClicks == 3) {
+        if (numClicks <= 50) {
           aco = true;
           sing = true;
+          numClicks = 0;
           guit = false;
         }
       }
       if (mouseX>=width/2-100 && mouseX<=width/2+100) {
         image(flame, width/2, height/2+30);
-        if (numClicks == 3) {
+        if (numClicks <= 50) {
           ele = true;
           sing = true;
+          numClicks = 0;
           guit = false;
         }
       }
       if (mouseX>=width-230 && mouseX<=width-30) {
         image(flame, width-130, height/2+25);
-        if (numClicks == 3) {
+        if (numClicks <= 50) {
           uke = true;
           sing = true;
+          numClicks = 0;
           guit = false;
         }
       }
@@ -60,25 +63,29 @@ class Guitar {
     if (mouseY<= height/2+200 && mouseY>= height/2-200) {
       if (mouseX>=30 && mouseX<=230) {
         image(flame, 130, height/2+50);
-        if (numClicks == 3) {
+        if (numClicks <= 50) {
           raco = true;
           sing = true;
+          numClicks = 0;
+          
           guit = false;
         }
       }
       if (mouseX>=width/2-100 && mouseX<=width/2+100) {
         image(flame, width/2-40, height/2+30);
-        if (numClicks == 3) {
+        if (numClicks <= 50) {
           rele = true;
           sing = true;
+          numClicks = 0;
           guit = false;
         }
       }
       if (mouseX>=width-230 && mouseX<=width-30) {
         image(flame, width-130, height/2+25);
-        if (numClicks == 3) {
+        if (numClicks <= 50) {
           ruke = true;
           sing = true;
+          numClicks = 0;
           guit = false;
         }
       }

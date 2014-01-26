@@ -4,7 +4,7 @@ class Songs {
   int enlarge =1;
   Songs() {
     white = loadImage("white_record.png");
-    white.resize(302, 300);
+//    white.resize(302, 300);
     blue = loadImage("blue_record.png");
     blue.resize(300, 300);
   }
@@ -36,18 +36,20 @@ class Songs {
     if (mouseY<=height-50 && mouseY>=50) {
       if (mouseX>width/2) {
         image(blue, width*3/4, height/2, 400, 400);
-        if (numClicks==4) {
+        if (numClicks <= 50) {
           song2 = true;
           run = true;
+          numClicks = 0;
           sing = false;
         }
       } 
       if (mouseX<width/2) {
         image(white, width/4, height/2, 403, 400);
         white.resize(603, 600);
-        if (numClicks==4) {
+        if (numClicks <= 50) {
           song1 = true;
           run = true;
+          numClicks = 0;
           sing = false;
         }
       }

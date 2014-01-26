@@ -16,6 +16,7 @@ class Startscreen {
     numClicks = 0;
   }
   void display () {
+    //Caitie, I love this. Rad. THANK YOU SO MUCH FOR DOING THIS
     //    //makes background rainbow
     //    for (int x=0; x< width; x+=20) {
     //      fill(dist(mouseX, 100, x, 0), 100, 100);
@@ -33,12 +34,12 @@ class Startscreen {
     //    noFill();
     //                 rect(width/8-20,height/2,835/3,219);
     //                 //the location I want for mouseX,Y stuff
-    if (numClicks == 1) {
+    if (numClicks <= 50) {
       //if you click "i wanna rock" the game will start
       if (mouseX <= width/2 && mouseX>= width/2-(835*3/4)/2 && mouseY <= height/1.5+219/2 && mouseY >= height/1.5-219/2) {
-        ellipse(mouseX, mouseY, 10, 10);
-        start = false;
+        numClicks = 0;
         select = true;
+        start = false;
       }
     }
   }

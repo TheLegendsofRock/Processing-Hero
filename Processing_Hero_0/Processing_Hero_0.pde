@@ -1,7 +1,7 @@
-//klllllllllllllllllllllllllllllllllllllllllllllllAll: search for your names or all for specific instructions.
-//Sam: I don't know where your game over code is, or where the pics are for it. if you could go back through old commits or find the folder, please just copy and paste it because it must not have merged correctly.
-//Working: refining this to make it simpler. Moving to Processing_Hero
-//trying to get angle to increase, then decrease. I'll get it, someday.
+//So my cat was on my keyboard and now that's here. it's one letter away from killlllllllllllllllllllllllllllllllllllllllllllll and came right before All, so now I'm a bit scared of my cat.
+
+//All: search for your names or all for specific instructions.
+//Working: trying to get angle to increase, then decrease. I'll get it, someday.
 //As of now, I can easily get it to go back to 0 after reaching 15, but it's too much of a break than I'd like.
 //  if(angle>=0){
 //    angle++;
@@ -25,56 +25,4 @@
 //    angle++;
 //    if (angle>=15) {
 //      angle = 0;
-
-//All:
-/*Music Ideas: in four chords
- G D Em C or C G Am F
- Superman by Five for Fighting
- You're Beautiful by James Blunt
- I'm Yours by Jason Mraz
- Where is the Love by Black Eyed Peas
- She Will be Loved by Maroon Five
- Where'd You Go by Fort Minor
- Happy Ending by Mika
- Under the Bridge by Red Hot Chili Peppers
- Man in the Mirror by Michael Jackson
- Take on Me by a-ha
- Whatever You Like by T.I.
- Apologize by OneRepublic
- Aicha by Outlandish
- Africa by Toto
- Save Tonight by Eagle Eye Cherry
- If I Were a Boy by Beyonce
- Soul Sister
- Can You Feel the Love Tonight
- With or Without You
- Pictures of You, Pictures of Me
- You're Gonna Go Far, Kid by The Offspring (CLEAN VERSION)
- Love the Way You Lie
- Kids by MGMT
- What It's Like by Everlast (acoustic song)
- 
- all from http: //www.youtube. com/watch?v=DEkPC-6Ni8Y
- http://www.youtube.com/watch?v=oOlDewpCfZQ
- 
- STRONGER CONTENDERS
- a Beatles song for acouistic. Let It Be has 4 chords.
- If I Lose Myself by OneRepublic
- I Will Wait by Mumford & Sons or other song
- Millionaires by The Script
- Hotel California by The Eagles, I think
- Sweet Home Alabama
- Dream On
- More Than a Feeling
- Fallen by Imagine Dragons
- Let Her Go (has 5 chords I think)
- Chasing Cars, Demons, It's Time may be too repetative/ simple.
- 
- HOW THIS WILL WORK:
- Each key plays a chord. Need recordings of chords to play as sudio.
- 
- Bohemian Rhapsody during character selection
- */
-
-// here's the font http://www.dafont.com/nightmare-hero.font
 

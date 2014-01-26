@@ -26,25 +26,28 @@ class Select { //select characters
         image(as, 130, height/2, 250, 250);
         //guess what. it works. boo to the yahhh.
 
-        if (numClicks == 2) {
+        if (numClicks <= 50) {
           shark = true;
           guit = true;
+          numClicks = 0;
           select = false;
         }
       }
       if (mouseX>=width/2-100 && mouseX<=width/2+100) {
         image(ak, width/2, height/2, 250, 250);
-        if (numClicks == 2) {
+        if (numClicks <= 50) {
           koala = true;
           guit = true;
+          numClicks = 0;
           select = false;
         }
       }
       if (mouseX>=width-230 && mouseX<=width-30) {
         image(aa, width-130, height/2, 250, 250);
-        if (numClicks == 2) {
+        if (numClicks <= 50) {
           ant = true;
           guit = true;
+          numClicks = 0;
           select = false;
         }
       }

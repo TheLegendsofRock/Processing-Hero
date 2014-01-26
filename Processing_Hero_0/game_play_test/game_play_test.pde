@@ -39,6 +39,8 @@ PImage tongue;
 int current;
 int change;
 int old = 0;
+PImage g; //ADD TO OTHER
+
 void setup() {
   //ADD TO when go back to start, player.rewind();
   minim = new Minim(this);
@@ -58,9 +60,9 @@ void setup() {
   rectMode(CENTER);
   gui = new Guitar();
   wild = new Animals();
-  koala = true;
+  koala = false;
   shark = false;
-  ant = false;
+  ant = true;
   pick = loadImage("fender_pick.png");
   pick.resize(40, 40);
   tongue = loadImage("flame.png");
@@ -70,14 +72,13 @@ void setup() {
 }
 void draw() {
 
-  //  fft.forward(in.mix); //mixes left and right of audio input channels
   current = millis();
   change = current - old; //ADD TO;
 
   if (run == true) {
-    background(0);
-    wild.load();
-    wild.play();
+    background(25,width,5);
+    wild.load(gui); //ADD TO OTHER
+    wild.winning(gui);
 
     play.display();
     if(pause == false){
