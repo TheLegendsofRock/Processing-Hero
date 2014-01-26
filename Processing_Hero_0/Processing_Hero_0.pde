@@ -1,5 +1,3 @@
-//So my cat was on my keyboard and now that's here. it's one letter away from killlllllllllllllllllllllllllllllllllllllllllllll and came right before All, so now I'm a bit scared of my cat.
-
 //All: search for your names or all for specific instructions.
 //Working: trying to get angle to increase, then decrease. I'll get it, someday.
 //As of now, I can easily get it to go back to 0 after reaching 15, but it's too much of a break than I'd like.
