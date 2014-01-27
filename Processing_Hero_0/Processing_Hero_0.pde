@@ -1,3 +1,11 @@
+<<<<<<< HEAD //I don't know what this is, but it's here. It's probably from the merge that only kind of worked out. See commit: "Tried to Merge With game-over-screen-2" for more info.
+=======
+
+Gameover g1;
+Notes[] n = new Notes[100];
+int g=50; 
+int score=-25;
+>>>>>>> origin/game-over-screen-2
 boolean run;
 boolean flash;
 int flashold = 0;
@@ -15,8 +23,17 @@ int angle = 0;
 Music[] m = new Music[200];
 
 void setup() {
+<<<<<<< HEAD
   wild = new Animals();
   size(750, 600); //Working: I keep changing this to 600 so it fits on my screen. Change it back to 800 if I forget to.
+=======
+  size(750, 800);
+  g1= new Gameover();
+  for (int i = 0; i < n.length; i++) {
+    //    n[i] = new Gameover();
+    //what are you trying to do here?
+  }
+>>>>>>> origin/game-over-screen-2
   strokeWeight(3);
   colorMode(HSB, width, 100, 100);
   s1 = new Startscreen();
@@ -26,6 +43,7 @@ void setup() {
   colorMode(HSB, 360, 100, 100, 100);
 }
 void draw() {
+<<<<<<< HEAD
       colorMode(HSB, 360, 100, 100, 100);
   //makes background rainbow
   for (int x=0; x< width; x+=20) {
@@ -166,3 +184,9 @@ void mousePressed() {
 
 // here's the font http://www.dafont.com/nightmare-hero.font
 
+=======
+  s1.display();
+  s1.go(); //I'll clean this up. I just need a placeholder now.
+}
+
+>>>>>>> origin/game-over-screen-2
