@@ -1,3 +1,7 @@
+
+Gameover g1;
+
+int score; //Working
 boolean run;
 boolean flash;
 int flashold = 0;
@@ -17,6 +21,8 @@ Music[] m = new Music[200];
 void setup() {
   wild = new Animals();
   size(750, 600); //Working: I keep changing this to 600 so it fits on my screen. Change it back to 800 if I forget to.
+  g1= new Gameover();
+
   strokeWeight(3);
   colorMode(HSB, width, 100, 100);
   s1 = new Startscreen();
@@ -80,57 +86,12 @@ void draw() {
     //    angle++;
     //    if (angle>=15) {
     //      angle = 0;
+//because no one looked at that.
 
-    /*Music Ideas: in four chords
-     G D Em C or C G Am F
-     Superman by Five for Fighting
-     You're Beautiful by James Blunt
-     I'm Yours by Jason Mraz
-     Where is the Love by Black Eyed Peas
-     She Will be Loved by Maroon Five
-     Where'd You Go by Fort Minor
-     Happy Ending by Mika
-     Under the Bridge by Red Hot Chili Peppers
-     Man in the Mirror by Michael Jackson
-     Take on Me by a-ha
-     Whatever You Like by T.I.
-     Apologize by OneRepublic
-     Aicha by Outlandish
-     Africa by Toto
-     Save Tonight by Eagle Eye Cherry
-     If I Were a Boy by Beyonce
-     Soul Sister
-     Can You Feel the Love Tonight
-     With or Without You
-     Pictures of You, Pictures of Me
-     You're Gonna Go Far, Kid by The Offspring (CLEAN VERSION)
-     Love the Way You Lie
-     Kids by MGMT
-     What It's Like by Everlast (acoustic song)
-     
-     all from http: //www.youtube. com/watch?v=DEkPC-6Ni8Y
-     http://www.youtube.com/watch?v=oOlDewpCfZQ
-     
-     STRONGER CONTENDERS
-     a Beatles song for acouistic. Let It Be has 4 chords.
-     If I Lose Myself by OneRepublic
-     I Will Wait by Mumford & Sons or other song
-     Millionaires by The Script
-     Hotel California by The Eagles, I think
-     Sweet Home Alabama
-     Dream On
-     More Than a Feeling
-     Fallen by Imagine Dragons
-     Let Her Go (has 5 chords I think)
-     Chasing Cars, Demons, It's Time may be too repetative/ simple.
-     
-     HOW THIS WILL WORK:
-     Each key plays a chord. Need recordings of chords to play as sudio.
-     
-     Bohemian Rhapsody during character selection
-     */
   }
   else {
+      s1.display();
+  s1.go(); //I'll clean this up. I just need a placeholder now.
     //says if run isn't true, then flash is true, and if flash is true, display the start screen
     current = millis();
     change = current - old;
@@ -164,5 +125,7 @@ void mousePressed() {
 }
 
 
-// here's the font http://www.dafont.com/nightmare-hero.font
+
+
+
 
