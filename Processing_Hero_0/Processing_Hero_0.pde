@@ -1,11 +1,7 @@
-<<<<<<< HEAD //I don't know what this is, but it's here. It's probably from the merge that only kind of worked out. See commit: "Tried to Merge With game-over-screen-2" for more info.
-=======
 
 Gameover g1;
-Notes[] n = new Notes[100];
-int g=50; 
-int score=-25;
->>>>>>> origin/game-over-screen-2
+
+int score; //Working
 boolean run;
 boolean flash;
 int flashold = 0;
@@ -23,17 +19,10 @@ int angle = 0;
 Music[] m = new Music[200];
 
 void setup() {
-<<<<<<< HEAD
   wild = new Animals();
   size(750, 600); //Working: I keep changing this to 600 so it fits on my screen. Change it back to 800 if I forget to.
-=======
-  size(750, 800);
   g1= new Gameover();
-  for (int i = 0; i < n.length; i++) {
-    //    n[i] = new Gameover();
-    //what are you trying to do here?
-  }
->>>>>>> origin/game-over-screen-2
+
   strokeWeight(3);
   colorMode(HSB, width, 100, 100);
   s1 = new Startscreen();
@@ -43,7 +32,6 @@ void setup() {
   colorMode(HSB, 360, 100, 100, 100);
 }
 void draw() {
-<<<<<<< HEAD
       colorMode(HSB, 360, 100, 100, 100);
   //makes background rainbow
   for (int x=0; x< width; x+=20) {
@@ -98,57 +86,12 @@ void draw() {
     //    angle++;
     //    if (angle>=15) {
     //      angle = 0;
+//because no one looked at that.
 
-    /*Music Ideas: in four chords
-     G D Em C or C G Am F
-     Superman by Five for Fighting
-     You're Beautiful by James Blunt
-     I'm Yours by Jason Mraz
-     Where is the Love by Black Eyed Peas
-     She Will be Loved by Maroon Five
-     Where'd You Go by Fort Minor
-     Happy Ending by Mika
-     Under the Bridge by Red Hot Chili Peppers
-     Man in the Mirror by Michael Jackson
-     Take on Me by a-ha
-     Whatever You Like by T.I.
-     Apologize by OneRepublic
-     Aicha by Outlandish
-     Africa by Toto
-     Save Tonight by Eagle Eye Cherry
-     If I Were a Boy by Beyonce
-     Soul Sister
-     Can You Feel the Love Tonight
-     With or Without You
-     Pictures of You, Pictures of Me
-     You're Gonna Go Far, Kid by The Offspring (CLEAN VERSION)
-     Love the Way You Lie
-     Kids by MGMT
-     What It's Like by Everlast (acoustic song)
-     
-     all from http: //www.youtube. com/watch?v=DEkPC-6Ni8Y
-     http://www.youtube.com/watch?v=oOlDewpCfZQ
-     
-     STRONGER CONTENDERS
-     a Beatles song for acouistic. Let It Be has 4 chords.
-     If I Lose Myself by OneRepublic
-     I Will Wait by Mumford & Sons or other song
-     Millionaires by The Script
-     Hotel California by The Eagles, I think
-     Sweet Home Alabama
-     Dream On
-     More Than a Feeling
-     Fallen by Imagine Dragons
-     Let Her Go (has 5 chords I think)
-     Chasing Cars, Demons, It's Time may be too repetative/ simple.
-     
-     HOW THIS WILL WORK:
-     Each key plays a chord. Need recordings of chords to play as sudio.
-     
-     Bohemian Rhapsody during character selection
-     */
   }
   else {
+      s1.display();
+  s1.go(); //I'll clean this up. I just need a placeholder now.
     //says if run isn't true, then flash is true, and if flash is true, display the start screen
     current = millis();
     change = current - old;
@@ -182,11 +125,7 @@ void mousePressed() {
 }
 
 
-// here's the font http://www.dafont.com/nightmare-hero.font
 
-=======
-  s1.display();
-  s1.go(); //I'll clean this up. I just need a placeholder now.
-}
 
->>>>>>> origin/game-over-screen-2
+
+
