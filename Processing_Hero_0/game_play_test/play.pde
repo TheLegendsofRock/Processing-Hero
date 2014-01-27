@@ -1,9 +1,9 @@
 class Play {
   Play() {
   }
-//  void setup(){
-//    player.play();
-//  } //I really hoped that this would work. I just need to get it somewhere where it won't loop, but it'll allow the song to vary and other things to run.
+  //  void setup(){
+  //    player.play();
+  //  } //I really hoped that this would work. I just need to get it somewhere where it won't loop, but it'll allow the song to vary and other things to run.
   void playSong() {
     //  }
     //  void  acoustic() {

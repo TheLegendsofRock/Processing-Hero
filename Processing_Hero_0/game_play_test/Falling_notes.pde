@@ -33,8 +33,11 @@ class RedNotes extends FallNotes {
     if (keyPressed) {
       //      if (key = 'H') {
       if (loc.y >= height-55) {
-        score++;
+        score+=1;
         //super.remove();
+      } 
+      else {
+        score-=1;
       }
     }
     if (loc.y >= height) {
@@ -56,7 +59,10 @@ class BloodOrangeNotes extends FallNotes { //she's so pretentious
     if (keyPressed) {
       //      if (key = 'J') {
       if (loc.y >= height-55) {
-        score++;
+        score+=1;
+      }
+      else {
+        score-=1;
       }
     }
     if (loc.y >= height) {
@@ -79,7 +85,10 @@ class OrangeNotes extends FallNotes {
     if (keyPressed) {
       //      if (key = 'K') {
       if (loc.y >= height-55) {
-        score++;
+        score+=1;
+      }
+      else {
+        score-=1;
       }
     }
     if (loc.y >= height) {
@@ -101,7 +110,10 @@ class YellowNotes extends FallNotes { //Implicit super constructor is undefined 
     if (keyPressed) {
       //      if (key = 'L') {
       if (loc.y >= height-55) {
-        score++;
+        score+=1;
+      }
+      else {
+        score-=1;
       }
     }
     if (loc.y >= height) {

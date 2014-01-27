@@ -1,5 +1,10 @@
 import ddf.minim.analysis.*;
 import ddf.minim.*;
+import ddf.minim.spi.*;
+import ddf.minim.signals.*;
+import ddf.minim.ugens.*;
+import ddf.minim.effects.*;
+
 Minim minim;
 //AudioInput in;
 //FFT fft; //splits up a soundwave into spectrum of bands so can tell volume of sound signal.
@@ -64,8 +69,8 @@ void setup() {
   gui = new Guitar();
   wild = new Animals();
   koala = false;
-  shark = false;
-  ant = true;
+  shark = true;
+  ant = false;
   pick = loadImage("fender_pick.png");
   pick.resize(40, 40);
   tongue = loadImage("flame.png");
@@ -86,7 +91,7 @@ void draw() {
 
 
     wild.load(gui); //ADD TO OTHER
-    if (score>=2) {
+    if (score>=50) {
       wild.winning(gui); //if the score is high enough, a different character displays
     } 
     else {
@@ -96,8 +101,10 @@ void draw() {
     if (pause == false) {
       music.playSong();
       if (singsong == true) {
-//        player.play();
-//        noLoop(); //if noLoop() this, the drops don't fall. It just plays and you can't pause until the song is over, I expect. Crud.
+//        play.loop(); //Emma, this doesn't work.
+
+        //        player.play();
+        //        noLoop(); //if noLoop() this, the drops don't fall. It just plays and you can't pause until the song is over, I expect. Crud.
       }
       //      fallNotes.add(new FallNotes());
       //      for (int i = fallNotes.size()-1; i >=0; i--) {
@@ -108,13 +115,17 @@ void draw() {
       //          fallNotes.remove(i);
       //        } //Working: I don't know how to do this.
       //      }
-//      frameRate(15); //thought this could be why there are so many ellipses/ the background is not refreshing over them, but I was wrong.
+      //      frameRate(15); //thought this could be why there are so many ellipses/ the background is not refreshing over them, but I was wrong.
       fallNotes.add(new RedNotes(220, random(-20, -70))); //for some reason, they fall in a line. there is no variance in their initial y height.
       fallNotes.add(new BloodOrangeNotes(325, random(-20, -70)));
       fallNotes.add(new OrangeNotes(430, random(-20, -70)));
       fallNotes.add(new YellowNotes(535, random(-20, -70))); //I don't know why this doesn't appear above it the lines and the score background.
     }
-  }
+//  if(score<=-200){
+//    gameover screeny. //Working add in
+//
+//  }
+}
 }
 
 void mousePressed() {

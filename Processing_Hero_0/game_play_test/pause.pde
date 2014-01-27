@@ -17,7 +17,6 @@ class Pause { //whenever spacebar pressed when run == true.
       ellipse(220+i*105, height-35, 105, 90);
       fill(c, 100, 100);
       ellipse(220+i*105, height-35, 85, 70);
-      
     }
     fill(23, 85, 95, 50);
     stroke(33, 85, 95, 50);

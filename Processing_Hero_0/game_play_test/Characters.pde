@@ -1,4 +1,3 @@
-//Working: need to move all the silly willigan picturas into data and i really better be able to find them or else im gonna go even crazier. what's a midterm
 class Animals {
   int angle = 0; //Working movement
   PImage ad, am, ab, rad, ram, rah, rab;
@@ -49,13 +48,13 @@ class Animals {
     }
     if (koala == true) {
       kb = loadImage("koala_body.png");
-      kh = loadImage("koala_head.png");
-      kd = loadImage("koala_hand.png");
+      kd = loadImage("koala_head.png");
+      kh = loadImage("koala_hand.png");
       kf = loadImage("Koala_r.png");
       kb.resize(0, 397);
-      kd.resize(0, 145);
-      kh.resize(0, 66);
-      kf.resize(0, 150);
+      kd.resize(0, 172);
+      kh.resize(0, 66); 
+      kf.resize(0, 188);
       rkb = loadImage("rk_body.png");
       rkh = loadImage("rk_hand.png");
       rkd = loadImage("rk_head.png");
@@ -80,15 +79,15 @@ class Animals {
     }
     if (raco == true) {
       g = loadImage("brown_guit.png");
-      g.resize(210, 630); //ADD TO OTHER
+      g.resize(158, 473); //ADD TO OTHER
     }
     if (rele == true) {
       g = loadImage("elect_axe_guitar.png");
       g.resize(250, 620); //ADD TO OTHER
     }
-    if(ruke == true){
-          g = loadImage("black_uke.png"); //ADD TO OTHER
-          g.resize(120, 350);
+    if (ruke == true) {
+      g = loadImage("black_uke.png"); //ADD TO OTHER
+      g.resize(120, 350);
     }
     //ADD TO OTHER
   }
@@ -121,7 +120,7 @@ class Animals {
       image(sb, width/3, height/2-100);
       image(st, width/3, height/2+125);
       pushMatrix(); //ADD TO OTHER
-      translate(width/3, height/2);
+      translate(width/3+130, height/2-120);
       rotate(QUARTER_PI);
       image(g, 0, 0);
       popMatrix(); //Working
@@ -134,11 +133,11 @@ class Animals {
       pushMatrix(); //ADD TO OTHER
       translate(width/3, height/2);
       rotate(QUARTER_PI);
-      image(g, 0, 0);
+      image(g, 0, -100);
       popMatrix(); //Working
-      image(kh, width/3, height/2);
-      image(kd, width/3, height/2);
-      image(kf, width/3, height/2);
+      image(kf, width/3-130, height/2-50);
+      image(kd, width/3-70, height/2-187);
+      image(kh, width/3+128, height/2-120);
     }
   }
   void winning(Guitar guitar) {
@@ -163,26 +162,26 @@ class Animals {
       image(rah, width/3+160, height/2+30);
     }
     if (shark == true) {
-      image(rsd, width/3, height/2);
+      image(rsd, width/3-75, height/2-50);
       pushMatrix(); //ADD TO OTHER
       translate(width/3, height/2);
       rotate(QUARTER_PI);
       image(g, 0, 0);
       popMatrix(); //Working
-      image(rsf, width/3, height/2);
-      image(rsh, width/3, height/2);
-      image(rst, width/3, height/2);
+      image(rsf, width/3-100, height/2+65);
+      image(rsh, width/3+55, height/2-50);
+      image(rst, width/3+45, height/2+200);
     }
     if (koala == true) {
       image(rkb, width/3, height/2);
+      image(rkd, width/3-75, height/2-200);
       pushMatrix(); //ADD TO OTHER
-      translate(width/3, height/2);
-      rotate(QUARTER_PI);
+      translate(width/3+30, height/2-100);
+            rotate(QUARTER_PI/2);
       image(g, 0, 0);
       popMatrix(); //Working
-      image(rkh, width/3, height/2);
-      image(rkd, width/3, height/2);
-      image(rkf, width/3, height/2);
+      image(rkh, width/3+60, height/2-210);
+      image(rkf, width/3-65, height/2+8);
     }
   }
 }
