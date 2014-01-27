@@ -4,7 +4,8 @@ import ddf.minim.spi.*;
 import ddf.minim.signals.*;
 import ddf.minim.ugens.*;
 import ddf.minim.effects.*;
-
+//Working: try: add more rand s, add l or L key ==
+//add pause text over ellipses
 Minim minim;
 //AudioInput in;
 //FFT fft; //splits up a soundwave into spectrum of bands so can tell volume of sound signal.
@@ -84,10 +85,7 @@ void draw() {
 
   if (run == true) {
     background(25, width, 5);
-    for (FallNotes f : fallNotes) {
-      f.display();
-      f.update();
-    }
+
 
 
     wild.load(gui); //ADD TO OTHER
@@ -98,34 +96,42 @@ void draw() {
       wild.play(gui);
     }
     play.display();
+    for (FallNotes f : fallNotes) {
+      f.display();
+      f.update();
+    }
     if (pause == false) {
       music.playSong();
       if (singsong == true) {
-//        play.loop(); //Emma, this doesn't work.
+        //        play.noLoop(); //Emma, this doesn't work.
 
         //        player.play();
         //        noLoop(); //if noLoop() this, the drops don't fall. It just plays and you can't pause until the song is over, I expect. Crud.
       }
       //      fallNotes.add(new FallNotes());
-      //      for (int i = fallNotes.size()-1; i >=0; i--) {
-      //        FallNotes f = fallNotes.get(i);
-      //        f.display();
-      //        f.update();
-      //        if (life == 0) {
-      //          fallNotes.remove(i);
-      //        } //Working: I don't know how to do this.
-      //      }
+      for (int i = fallNotes.size()-1; i >=0; i--) {
+        FallNotes f = fallNotes.get(i);
+        //        f.display();
+        //        f.update();
+        if (f.life == 0) {
+          fallNotes.remove(i);
+          //        } //Working: I don't know how to do this.
+        }
+      }
       //      frameRate(15); //thought this could be why there are so many ellipses/ the background is not refreshing over them, but I was wrong.
-      fallNotes.add(new RedNotes(220, random(-20, -70))); //for some reason, they fall in a line. there is no variance in their initial y height.
+      int rand = int(random(30));
+      if (rand%5 == 0) { //try 4, up to 100, one for each class
+        fallNotes.add(new RedNotes(220, random(-20, -70))); //for some reason, they fall in a line. there is no variance in their initial y height.
+      }
       fallNotes.add(new BloodOrangeNotes(325, random(-20, -70)));
       fallNotes.add(new OrangeNotes(430, random(-20, -70)));
       fallNotes.add(new YellowNotes(535, random(-20, -70))); //I don't know why this doesn't appear above it the lines and the score background.
     }
-//  if(score<=-200){
-//    gameover screeny. //Working add in
-//
-//  }
-}
+    //  if(score<=-200){
+    //    gameover screeny. //Working add in
+    //
+    //  }
+  }
 }
 
 void mousePressed() {
@@ -153,8 +159,7 @@ void keyPressed() {
   }
 }
 //ADD TO OTHER IF THIS WORKS
-void stop() { //OH MY GOODNESS GRACIOUS IT WOOOOORKS WHOOOOOHOOOOOOPS i don't really know why.
-  //so I'm assuming stop is when you close the window. So could I make the music keep playing until you close the code? Maybe not.
+void stop() {   //so I'm assuming stop is when you close the window. So could I make the music keep playing until you close the code? Maybe not.
   //  stars.close();
   //  trouble.close();
   //  count.close();

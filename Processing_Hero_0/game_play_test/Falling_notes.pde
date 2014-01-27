@@ -1,9 +1,11 @@
 class FallNotes {
   PVector loc, vel, acc;
   float c;
+  int life;
   FallNotes(float x, float y) {
     loc = new PVector(x, y);
     acc = new PVector(0, .1);
+    life = 1;
   }
   void display() {
 
@@ -15,9 +17,8 @@ class FallNotes {
       vel.add(acc);
       loc.add(vel);
     }
-    if (life == 0) {
-      loc.y = random(-25, -50);
-      life = 1;
+    if (loc.y >= height) {
+      life = 0;
     }
   }
 }
@@ -31,21 +32,17 @@ class RedNotes extends FallNotes {
   void update() {
     super.update();
     if (keyPressed) {
-      //      if (key = 'H') {
-      if (loc.y >= height-55) {
-        score+=1;
-        //super.remove();
-      } 
-      else {
-        score-=1;
+      if (key == 'H') {
+        if (loc.y >= height-55) {
+          score+=1;
+        } 
+        else {
+          score-=1;
+        }
       }
-    }
-    if (loc.y >= height) {
-      life = 0;
     }
   }
 }
-//}
 
 class BloodOrangeNotes extends FallNotes { //she's so pretentious
   BloodOrangeNotes(float x, float y) {
@@ -57,20 +54,18 @@ class BloodOrangeNotes extends FallNotes { //she's so pretentious
   void update() {
     super.update();
     if (keyPressed) {
-      //      if (key = 'J') {
-      if (loc.y >= height-55) {
-        score+=1;
+      if (key == 'J') {
+        if (loc.y >= height-55) {
+          score+=1;
+        }
+        else {
+          score-=1;
+        }
       }
-      else {
-        score-=1;
-      }
-    }
-    if (loc.y >= height) {
-      life = 0;
     }
   }
 }
-//}
+
 
 
 class OrangeNotes extends FallNotes {
@@ -83,20 +78,17 @@ class OrangeNotes extends FallNotes {
   void update() {
     super.update();
     if (keyPressed) {
-      //      if (key = 'K') {
-      if (loc.y >= height-55) {
-        score+=1;
+      if (key == 'K') {
+        if (loc.y >= height-55) {
+          score+=1;
+        }
+        else {
+          score-=1;
+        }
       }
-      else {
-        score-=1;
-      }
-    }
-    if (loc.y >= height) {
-      life = 0;
     }
   }
 }
-//}
 
 class YellowNotes extends FallNotes { //Implicit super constructor is undefined for default constructor. Must define an explicit constructor. What does this mean?
   YellowNotes(float x, float y) {
@@ -106,20 +98,19 @@ class YellowNotes extends FallNotes { //Implicit super constructor is undefined 
     x = 535;
   }
   void update() {
-    super.update();
-    if (keyPressed) {
-      //      if (key = 'L') {
-      if (loc.y >= height-55) {
-        score+=1;
+    super.update();  
+    if (keyPressed) {    
+
+      if (key == 'L' || key == 'l') { //try and change for all.
+print("I'm pressing the L key!  ");
+        if (loc.y >= height-55) {
+          score+=1;
+        }
+        else {
+          score-=1;
+        }
       }
-      else {
-        score-=1;
-      }
-    }
-    if (loc.y >= height) {
-      life = 0;
     }
   }
-  //  }
 }
 

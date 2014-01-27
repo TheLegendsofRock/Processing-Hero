@@ -129,5 +129,12 @@ void keyPressed() {
 }
 void mousePressed() {
   numClicks += 1;
+  if (select == false && start == true) {
+    if (mouseX <= width/2 && mouseX>= width/2-(835*3/4)/2 && mouseY <= height/1.5+219/2 && mouseY >= height/1.5-219/2) {
+      numClicks = 0; //try this for other booleans, but keep two in the if(). can just get rid of numClicks. go through code again.
+      select = true;
+      start = false;
+    }
+  }
 }//cuz now if click once wrong, lose any chance.
 

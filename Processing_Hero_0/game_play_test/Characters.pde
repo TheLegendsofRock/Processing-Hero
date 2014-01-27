@@ -177,7 +177,7 @@ class Animals {
       image(rkd, width/3-75, height/2-200);
       pushMatrix(); //ADD TO OTHER
       translate(width/3+30, height/2-100);
-            rotate(QUARTER_PI/2);
+      rotate(QUARTER_PI/2);
       image(g, 0, 0);
       popMatrix(); //Working
       image(rkh, width/3+60, height/2-210);

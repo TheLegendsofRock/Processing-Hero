@@ -36,11 +36,7 @@ class Startscreen {
     //                 //the location I want for mouseX,Y stuff
     if (mousePressed) {
       //if you click "i wanna rock" the game will start
-      if (mouseX <= width/2 && mouseX>= width/2-(835*3/4)/2 && mouseY <= height/1.5+219/2 && mouseY >= height/1.5-219/2) {
-        numClicks = 0;
-        select = true;
-        start = false;
-      }
+      
     }
   }
 }
