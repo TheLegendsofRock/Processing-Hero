@@ -34,7 +34,7 @@ class Startscreen {
     //    noFill();
     //                 rect(width/8-20,height/2,835/3,219);
     //                 //the location I want for mouseX,Y stuff
-    if (numClicks <= 50) {
+    if (mousePressed) {
       //if you click "i wanna rock" the game will start
       if (mouseX <= width/2 && mouseX>= width/2-(835*3/4)/2 && mouseY <= height/1.5+219/2 && mouseY >= height/1.5-219/2) {
         numClicks = 0;

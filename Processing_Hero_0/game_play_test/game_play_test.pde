@@ -17,8 +17,8 @@ Pause play;
 Play music;
 boolean pause = true;
 //Instrument types:
-boolean aco = true;
-boolean raco = false;
+boolean aco = false;
+boolean raco = true;
 boolean ele = false;
 boolean rele = false;
 boolean uke = false;
@@ -41,6 +41,8 @@ int current;
 int change;
 int old = 0;
 PImage g; //ADD TO OTHER
+int life = 1; //ADD TO OTHER
+boolean singsong = true; //ADD TO OTHER
 
 void setup() {
   //ADD TO when go back to start, player.rewind();
@@ -52,7 +54,7 @@ void setup() {
   //  soul = minim.loadFile("Train - Hey, Soul Sister.mp3", 2048);
   //  in = minim.getLineIn(Minim.STEREO, 512); //I don't know what any of this means. Emma, if you understand minim, please work on this.
   //  fft = new FFT(in.buffersize(), in.sampleRate());
-  fallNotes.add(new FallNotes()); //ADD TO OTHER
+  //  fallNotes.add(new FallNotes()); //ADD TO OTHER
   imageMode(CENTER);
   size(750, 700); //Working: change back later; 
   colorMode(HSB, width, 100, 100);
@@ -72,12 +74,17 @@ void setup() {
   music = new Play();
 }
 void draw() {
-
   current = millis();
   change = current - old; //ADD TO;
 
   if (run == true) {
     background(25, width, 5);
+    for (FallNotes f : fallNotes) {
+      f.display();
+      f.update();
+    }
+
+
     wild.load(gui); //ADD TO OTHER
     if (score>=2) {
       wild.winning(gui); //if the score is high enough, a different character displays
@@ -85,42 +92,31 @@ void draw() {
     else {
       wild.play(gui);
     }
-
     play.display();
     if (pause == false) {
       music.playSong();
-      player.play();
-      fallNotes.add(new FallNotes());
-      for (int i = fallNotes.size()-1; i >=0; i--) {
-        FallNotes f = fallNotes.get(i);
-        f.display();
-        f.update();
-        if (keyPressed) {
-          if (key == 'H') {
-            if (f.loc.y<=10) {
-              fallNotes.remove(i);
-            }
-            if (key == 'J') {
-              if (f.loc.y<=10) {
-                fallNotes.remove(i);
-              }
-            }
-            if (key == 'H') {
-              if (f.loc.y<=10) {
-                fallNotes.remove(i);
-              }
-            }
-            if (key == 'H') {
-              if (f.loc.y<=10) {
-                fallNotes.remove(i);
-              }
-            } //Working: I don't know how to do this.
-          }
-        }
+      if (singsong == true) {
+//        player.play();
+//        noLoop(); //if noLoop() this, the drops don't fall. It just plays and you can't pause until the song is over, I expect. Crud.
       }
+      //      fallNotes.add(new FallNotes());
+      //      for (int i = fallNotes.size()-1; i >=0; i--) {
+      //        FallNotes f = fallNotes.get(i);
+      //        f.display();
+      //        f.update();
+      //        if (life == 0) {
+      //          fallNotes.remove(i);
+      //        } //Working: I don't know how to do this.
+      //      }
+//      frameRate(15); //thought this could be why there are so many ellipses/ the background is not refreshing over them, but I was wrong.
+      fallNotes.add(new RedNotes(220, random(-20, -70))); //for some reason, they fall in a line. there is no variance in their initial y height.
+      fallNotes.add(new BloodOrangeNotes(325, random(-20, -70)));
+      fallNotes.add(new OrangeNotes(430, random(-20, -70)));
+      fallNotes.add(new YellowNotes(535, random(-20, -70))); //I don't know why this doesn't appear above it the lines and the score background.
     }
   }
 }
+
 void mousePressed() {
   run = true;
 }

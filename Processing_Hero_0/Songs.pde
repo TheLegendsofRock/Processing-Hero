@@ -36,7 +36,7 @@ class Songs {
     if (mouseY<=height-50 && mouseY>=50) {
       if (mouseX>width/2) {
         image(blue, width*3/4, height/2, 400, 400);
-        if (numClicks <= 50) {
+        if (mousePressed) {
           song2 = true;
           run = true;
           numClicks = 0;
@@ -46,7 +46,7 @@ class Songs {
       if (mouseX<width/2) {
         image(white, width/4, height/2, 403, 400);
         white.resize(603, 600);
-        if (numClicks <= 50) {
+        if (mousePressed) {
           song1 = true;
           run = true;
           numClicks = 0;

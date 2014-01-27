@@ -26,7 +26,7 @@ class Select { //select characters
         image(as, 130, height/2, 250, 250);
         //guess what. it works. boo to the yahhh.
 
-        if (numClicks <= 50) {
+        if (mousePressed) {
           shark = true;
           guit = true;
           numClicks = 0;
@@ -35,7 +35,7 @@ class Select { //select characters
       }
       if (mouseX>=width/2-100 && mouseX<=width/2+100) {
         image(ak, width/2, height/2, 250, 250);
-        if (numClicks <= 50) {
+        if (mousePressed) {
           koala = true;
           guit = true;
           numClicks = 0;
@@ -44,7 +44,7 @@ class Select { //select characters
       }
       if (mouseX>=width-230 && mouseX<=width-30) {
         image(aa, width-130, height/2, 250, 250);
-        if (numClicks <= 50) {
+        if (mousePressed) {
           ant = true;
           guit = true;
           numClicks = 0;

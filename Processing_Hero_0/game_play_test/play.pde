@@ -1,6 +1,9 @@
 class Play {
   Play() {
   }
+//  void setup(){
+//    player.play();
+//  } //I really hoped that this would work. I just need to get it somewhere where it won't loop, but it'll allow the song to vary and other things to run.
   void playSong() {
     //  }
     //  void  acoustic() {
@@ -30,10 +33,13 @@ class Play {
       //  count.play();
     }
 
-    if (pause == false) {
+    if (pause == true) {
+      player.pause();
       //      y++;
-    }
-//    player.play();
+    } 
+    //    else {
+    //      player.play();
+    //    }
   }
 }
 
