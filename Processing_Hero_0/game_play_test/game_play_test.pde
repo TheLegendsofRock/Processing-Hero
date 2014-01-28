@@ -70,8 +70,8 @@ void setup() {
   gui = new Guitar();
   wild = new Animals();
   koala = false;
-  shark = true;
-  ant = false;
+  shark = false;
+  ant = true;
   pick = loadImage("fender_pick.png");
   pick.resize(40, 40);
   tongue = loadImage("flame.png");
@@ -80,14 +80,9 @@ void setup() {
   music = new Play();
 }
 void draw() {
-  current = millis();
-  change = current - old; //ADD TO;
-
+//ADD TO;
   if (run == true) {
     background(25, width, 5);
-
-
-
     wild.load(gui); //ADD TO OTHER
     if (score>=50) {
       wild.winning(gui); //if the score is high enough, a different character displays
@@ -103,29 +98,30 @@ void draw() {
     if (pause == false) {
       music.playSong();
       if (singsong == true) {
-        //        play.noLoop(); //Emma, this doesn't work.
-
-        //        player.play();
-        //        noLoop(); //if noLoop() this, the drops don't fall. It just plays and you can't pause until the song is over, I expect. Crud.
+        //        player.noLoop(); //Working: this is not working the way we wanted it to.
       }
-      //      fallNotes.add(new FallNotes());
       for (int i = fallNotes.size()-1; i >=0; i--) {
         FallNotes f = fallNotes.get(i);
-        //        f.display();
-        //        f.update();
         if (f.life == 0) {
           fallNotes.remove(i);
-          //        } //Working: I don't know how to do this.
         }
       }
-      //      frameRate(15); //thought this could be why there are so many ellipses/ the background is not refreshing over them, but I was wrong.
-      int rand = int(random(30));
-      if (rand%5 == 0) { //try 4, up to 100, one for each class
-        fallNotes.add(new RedNotes(220, random(-20, -70))); //for some reason, they fall in a line. there is no variance in their initial y height.
+      int randa = int(random(100));
+      int randb = int(random(100));
+      int randc = int(random(100));
+      int randd = int(random(100));
+      if (randa%15 == 0) {         
+        fallNotes.add(new RedNotes(220, random(-20, -70)));
       }
-      fallNotes.add(new BloodOrangeNotes(325, random(-20, -70)));
-      fallNotes.add(new OrangeNotes(430, random(-20, -70)));
-      fallNotes.add(new YellowNotes(535, random(-20, -70))); //I don't know why this doesn't appear above it the lines and the score background.
+      if (randb%20 == 0) {
+        fallNotes.add(new BloodOrangeNotes(325, random(-20, -70)));
+      }
+      if (randc%30 == 0) {
+        fallNotes.add(new OrangeNotes(430, random(-20, -70)));
+      }
+      if (randd%50 == 0) {
+        fallNotes.add(new YellowNotes(535, random(-20, -70))); //I don't know why this doesn't appear above it the lines and the score background.
+      }
     }
     //  if(score<=-200){
     //    gameover screeny. //Working add in
@@ -143,16 +139,16 @@ void keyPressed() {
       pause=!pause; //the little fridger works. 
       //Working: maybe i'll try this with mousepressed, and put it in each class.
     }
-    if (key == 'h') { //ADD TO OTHER
+    if (key == 'h' || key == 'H') { //ADD TO OTHER
       image(tongue, 220, height-75);
     }
-    if (key == 'j') {
+    if (key == 'j' || key == 'J') {
       image(tongue, 325, height-75);
     }
-    if (key == 'k') {
+    if (key == 'k' || key == 'K') {
       image(tongue, 430, height-75);
     }
-    if (key == 'l') {
+    if (key == 'l' || key == 'L') {
       image(tongue, 535, height-75);
       //ADD TO OTHER
     }

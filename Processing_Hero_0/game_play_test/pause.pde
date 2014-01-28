@@ -23,7 +23,7 @@ class Pause { //whenever spacebar pressed when run == true.
     rect(width*3/4+75, height/2, 200, 150, 50);
     image(scoree, width*3/4+75, height/2-25);
     textSize(50);
-    fill(255, 200);
+    fill(0);
     text(score, width*3/4+75, height/2+50);
     if (pause == true) {
       fill(13, 85, 95, 75);

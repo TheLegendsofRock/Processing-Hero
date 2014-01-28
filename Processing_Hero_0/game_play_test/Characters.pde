@@ -65,6 +65,29 @@ class Animals {
       rkf.resize(0, 227);
     }
     //ADD TO OTHER
+       if (angle>=0) {
+      angle++;
+      if (angle<=15) {
+        angle--;
+      }
+    }
+    for (int a = 0; a<=15; a++) {
+      a = angle;
+    }
+    for (int e = 15; e>=0; e--) {
+      e = angle;
+    }
+    if (angle<=15) {
+      angle++;
+    } 
+    else {
+      angle--;
+    }
+
+    angle++;
+    if (angle>=15) {
+      angle = 0;
+    }
     if (aco == true) {
       g = loadImage("acoustic_guitar.png"); //ADD TO OTHER
       g.resize(180, 461);

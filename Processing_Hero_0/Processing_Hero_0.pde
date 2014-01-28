@@ -1,26 +1,6 @@
 //All: search for your names or all for specific instructions.
-//Working: trying to get angle to increase, then decrease. I'll get it, someday.
-//As of now, I can easily get it to go back to 0 after reaching 15, but it's too much of a break than I'd like.
-//  if(angle>=0){
-//    angle++;
-//    if(angle<=15){
-//      angle--;
-//    }
-//  }
-//  for (int a = 0; a<=15; a++){
-//    a = angle;
-//  }
-//  for(int e = 15; e>=0; e--){
-//    e = angle;
-//  }
-//  if (angle<=15) {
-//    angle++;
-//  } 
-//  else {
-//    angle--;
-//  }
+//with a sine function you stup
+//actually nevermind, i don't know how to do that.
 
-//    angle++;
-//    if (angle>=15) {
-//      angle = 0;
+
 
