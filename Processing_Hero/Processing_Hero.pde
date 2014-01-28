@@ -135,68 +135,89 @@ void mousePressed() {
       select = true;
       start = false;
     }
-    if (select == true && git == false) {
-      if (mouseY<= height/2+200 && mouseY>= height/2-200) {
-        if (mouseX>=30 && mouseX<=230) {
-          //        as.resize(250, 250); //gives me coordinate out of bounds. let's try another way.
-          //        image(as, 130, height/2, 250, 250);
-          //guess what. it works. boo to the yahhh.
+  }
+  if (select == true && guit == false) {
+    if (mouseY<= height/2+200 && mouseY>= height/2-200) {
+      if (mouseX>=30 && mouseX<=230) {
+        //        as.resize(250, 250); //gives me coordinate out of bounds. let's try another way.
+        //        image(as, 130, height/2, 250, 250);
+        //guess what. it works. boo to the yahhh.
 
-          shark = true;
-          guit = true;
-          //          numClicks = 0;
-          select = false;
-        }
+//        shark = true;
+        guit = true;
+        //          numClicks = 0;
+        select = false;
       }
+
       if (mouseX>=width/2-100 && mouseX<=width/2+100) {
         //        image(ak, width/2, height/2, 250, 250);
-        koala = true;
+//        koala = true;
+        guit = true;
+        //          numClicks = 0;
+        select = false;
+      }
+
+      if (mouseX>=width-230 && mouseX<=width-30) {
+        //        image(aa, width-130, height/2, 250, 250);
+
+//        ant = true;
         guit = true;
         //          numClicks = 0;
         select = false;
       }
     }
-    if (mouseX>=width-230 && mouseX<=width-30) {
-      //        image(aa, width-130, height/2, 250, 250);
+  }
+  if (guit == true && sing == false) {
+    if (mouseY<= height/2+200 && mouseY>= height/2-200) {
+      if (mouseX>=30 && mouseX<=230) {
+        //          image(flame, 130, height/2+50);
+        if (mousePressed) {
+          aco = true;
+          sing = true;
+          //            numClicks = 0;
+          guit = false;
+        }
+      }
+      if (mouseX>=width/2-100 && mouseX<=width/2+100) {
+        //          image(flame, width/2, height/2+30);
+        if (mousePressed) {
+          ele = true;
+          sing = true;
+          //            numClicks = 0;
+          guit = false;
+        }
+      }
+      if (mouseX>=width-230 && mouseX<=width-30) {
+        //          image(flame, width-130, height/2+25);
+        if (mousePressed) {
+          uke = true;
+          sing = true;
+          //            numClicks = 0;
+          guit = false;
+        }
+      }
+    }
+  }
+  if (sing == true && run == false) {
+    if (mouseY<=height-50 && mouseY>=50) {
+      if (mouseX>width/2) {
+        //        image(blue, width*3/4, height/2, 400, 400);
 
-      ant = true;
-      guit = true;
+        song2 = true;
+        run = true;
+        //          numClicks = 0;
+        sing = false;
+      }
+    }
+
+    if (mouseX<width/2) {
+      //        image(white, width/4, height/2, 403, 400);
+      //        white.resize(603, 600);
+      song1 = true;
+      run = true;
       //          numClicks = 0;
-      select = false;
+      sing = false;
     }
   }
 }
-if (guit == true && sing == false) {
-  if (mouseY<= height/2+200 && mouseY>= height/2-200) {
-    if (mouseX>=30 && mouseX<=230) {
-      //          image(flame, 130, height/2+50);
-      if (mousePressed) {
-        aco = true;
-        sing = true;
-        //            numClicks = 0;
-        guit = false;
-      }
-    }
-    if (mouseX>=width/2-100 && mouseX<=width/2+100) {
-      //          image(flame, width/2, height/2+30);
-      if (mousePressed) {
-        ele = true;
-        sing = true;
-        //            numClicks = 0;
-        guit = false;
-      }
-    }
-    if (mouseX>=width-230 && mouseX<=width-30) {
-      //          image(flame, width-130, height/2+25);
-      if (mousePressed) {
-        uke = true;
-        sing = true;
-        //            numClicks = 0;
-        guit = false;
-      }
-    }
-  }
-}
-}
-}//cuz now if click once wrong, lose any chance.
 
