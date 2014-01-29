@@ -23,7 +23,10 @@ class Select { //select characters
     if (mouseY<= height/2+200 && mouseY>= height/2-200) {
       if (mouseX>=30 && mouseX<=230) {
         image(as, 130, height/2, 250, 250); //if mouse over, image enlarges.
-        if (mousePressed) { //if select:
+
+//Hey, Kristie, read this!
+//If this if statement runs while the mouse is still pressed, it will change the booleans
+         if (mousePressed) { //if select:
           shark = true; //character will display during gameplay
           guit = true; //guitar selection screen will load
           //          numClicks = 0;
@@ -31,7 +34,8 @@ class Select { //select characters
           //Working: Issues: To do: this is currently also being done under voide mousePressed in the Processing_Hero tab.
           //May need to comment it all out here (except for the resizing pictures bit) to avoid redundancy.
         }
-      }
+        
+       }
       if (mouseX>=width/2-100 && mouseX<=width/2+100) {
         image(ak, width/2, height/2, 250, 250);
         if (mousePressed) {
