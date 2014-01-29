@@ -1,6 +1,6 @@
 class Select { //select characters
   PImage as, aa, ak; //declare here
-  Select() {
+  Select() { //give value here.
     shark = false;
     ant = false;
     koala = false;
@@ -17,20 +17,19 @@ class Select { //select characters
     image(aa, width-130, height/2);
     image(as, 130, height/2);
     image(ak, width/2, height/2);
-    //display images of shark, ant koala
+    //display images of shark, ant, and koala album art.
   }
   void mouseOver() {
     if (mouseY<= height/2+200 && mouseY>= height/2-200) {
       if (mouseX>=30 && mouseX<=230) {
-        //        as.resize(250, 250); //gives me coordinate out of bounds. let's try another way.
-        image(as, 130, height/2, 250, 250);
-        //guess what. it works. boo to the yahhh.
-
-        if (mousePressed) {
-          shark = true;
-          guit = true;
-          numClicks = 0;
-          select = false;
+        image(as, 130, height/2, 250, 250); //if mouse over, image enlarges.
+        if (mousePressed) { //if select:
+          shark = true; //character will display during gameplay
+          guit = true; //guitar selection screen will load
+          //          numClicks = 0;
+          select = false; //character selection screen will not display.
+          //Working: Issues: To do: this is currently also being done under voide mousePressed in the Processing_Hero tab.
+          //May need to comment it all out here (except for the resizing pictures bit) to avoid redundancy.
         }
       }
       if (mouseX>=width/2-100 && mouseX<=width/2+100) {
@@ -38,7 +37,7 @@ class Select { //select characters
         if (mousePressed) {
           koala = true;
           guit = true;
-          numClicks = 0;
+          //          numClicks = 0;
           select = false;
         }
       }
@@ -47,12 +46,10 @@ class Select { //select characters
         if (mousePressed) {
           ant = true;
           guit = true;
-          numClicks = 0;
+          //          numClicks = 0;
           select = false;
         }
       }
-      //if mouse loc over, increase size
-      //if click, set to true
     }
   }
 }

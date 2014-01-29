@@ -17,14 +17,9 @@ class Startscreen {
   }
   void display () {
     //Caitie, I love this. Rad. THANK YOU SO MUCH FOR DOING THIS
-    //    //makes background rainbow
-    //    for (int x=0; x< width; x+=20) {
-    //      fill(dist(mouseX, 100, x, 0), 100, 100);
-    //      rect(x, 0, width/8, height);
-    //    }
     stroke(random(100), 94, 99);
     line(width/2, height/2, random(width), random(height) );
-    for (int i = 0; i < index; i++) {
+    for (int i = 0; i < index; i++) { //Working: because this isn't working, may just delete this code. The winged notes are not falling as we wanted them to.
       m[i].display();
       m[i].drop();
     }
@@ -36,12 +31,17 @@ class Startscreen {
     //                 //the location I want for mouseX,Y stuff
     if (mousePressed) {
       //if you click "i wanna rock" the game will start
-      
+      //      if (mouseX <= width/2 && mouseX>= width/2-(835*3/4)/2 && mouseY <= height/1.5+219/2 && mouseY >= height/1.5-219/2) { 
+      //As of right now, this is also in the Processing_Hero tab under void mousePressed. So I don't think it needs to be uncommented here.
+      //        //      numClicks = 0;
+      //        select = true;
+      //        start = false;
     }
   }
 }
 
-class Music {
+
+class Music { //Working: Issues: This isn't working, so may just delete the class. Is it not falling because it's a separate class that's not in its own separate tab?
   PVector loc, vel, acc;
   int d;
   int s=3/8;

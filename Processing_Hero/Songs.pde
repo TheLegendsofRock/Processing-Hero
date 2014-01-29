@@ -1,10 +1,10 @@
-//All: please choose songs. and add them by following steps for minim. Emma, i think you know how to do this: folder name or something.
+//Issues: Working: To do: tons of issues when this does display. The record images do not change size and clicking does not make you leave the music / song selection screen.
 class Songs {
   PImage white, blue;
   int enlarge =1;
   Songs() {
     white = loadImage("white_record.png");
-//    white.resize(302, 300);
+    //    white.resize(302, 300);
     blue = loadImage("blue_record.png");
     blue.resize(300, 300);
   }
@@ -16,6 +16,8 @@ class Songs {
     fill(175, width, 100); //Working: Emma: I don't know what's up with the fill. i thought this was cyan, but it's red.
     if ( aco == true || raco == true) {
       text("Counting Stars\nOneRepublic", width*3/4, height/2);
+      //text("othersong", width*3/4, height/2);
+      //To do: Sam, I think we're also adding The A Team as a song? Please add it as data and type in the text here so it'll be labelled.
     } 
     //    else {
     if (ele == true || rele == true) {
@@ -32,14 +34,15 @@ class Songs {
 
     //    loop();
   }
-  void mouseOver() {
+  void mouseOver() { //Issues: the records do not enlarge when mouse over them. 
+    //the clicking does not cause advancement to the gameplay/run screens, a symplified version of which is under the Pause tab.
     if (mouseY<=height-50 && mouseY>=50) {
       if (mouseX>width/2) {
         image(blue, width*3/4, height/2, 400, 400);
         if (mousePressed) {
           song2 = true;
           run = true;
-          numClicks = 0;
+          //          numClicks = 0;
           sing = false;
         }
       } 
@@ -49,7 +52,7 @@ class Songs {
         if (mousePressed) {
           song1 = true;
           run = true;
-          numClicks = 0;
+          //          numClicks = 0;
           sing = false;
         }
       }

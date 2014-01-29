@@ -1,3 +1,4 @@
+//right now this is just a placeholder. The real work concerning pause and gameplay screens is being done in game_play_test. Please work on it there.
 class Pause { //whenever spacebar pressed when run == true.
   //instructions screen
   Pause() {

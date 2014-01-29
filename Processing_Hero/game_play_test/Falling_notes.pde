@@ -7,20 +7,20 @@ class FallNotes {
     space = 100;
     loc = new PVector(x, y);
     acc = new PVector(0, .1);
-    if(aco == true || raco == true){
-        vel = new PVector(0, random(20,10));
+    if (aco == true || raco == true) {
+      vel = new PVector(0, random(20, 10));
     }
-    if(ele == true || rele == true){
-          vel = new PVector(0, random(30, 15));
+    if (ele == true || rele == true) {
+      vel = new PVector(0, random(30, 15));
     }
-    if(uke == true || ruke == true){
-          vel = new PVector(0, random(50, 40)); //it gets tough man.
+    if (uke == true || ruke == true) {
+      vel = new PVector(0, random(50, 40)); //it gets tough man.
     }
     life = 1;
   }
   void display() {
-strokeWeight(10);
-    fill(c, 100, 100,99);
+    strokeWeight(10);
+    fill(c, 100, 100, 99);
     ellipse(loc.x, loc.y, 70, 70);
   }
   void update() {
@@ -28,16 +28,16 @@ strokeWeight(10);
       vel.add(acc);
       loc.add(vel);
     }
-    if (loc.y >= height+space) {
+    if (loc.y >= height+space) { //Working: Issue: right now, the score is a bit glitchy. The ellipses aren't disappearing when the key is pressed and 
       life = 0;
       score-=1;
     }
-    if(keyPressed && loc.y < height - space){
+    if (keyPressed && loc.y < height - space) {
       score-=1;
     }
   }
 }
-class RedNotes extends FallNotes {
+class RedNotes extends FallNotes { //Class extensions for specific notes
   RedNotes(float x, float y) {
     super(x, y);
     c = 0;
@@ -48,12 +48,13 @@ class RedNotes extends FallNotes {
     if (keyPressed) {
       if (key == 'H') {
         if (loc.y >= height-space) {
-          score+=1;
+          score+=1; //Working: Issue: I don't think this part is running. Whenever I add a print("anything  "); 
+          //it does not display. How can we make sure this runs so scores can RISE?
           life = 0;
-          print("I pressed it    "); //Working: it does not recognize this.
+          print("I pressed it    "); //Working: it does not recognize this. //Working: this is just to test. At least when I've done this, it doesn't run.
         } 
         else {
-          score-=1;
+          score-=1; //Working: To do: test to make sure this runs.
         }
       }
     }
@@ -72,7 +73,7 @@ class BloodOrangeNotes extends FallNotes { //she's so pretentious
       if (key == 'J') {
         if (loc.y >= height-space) {
           score+=1;
-                    life = 0;
+          life = 0;
         }
         else {
           score-=1;
@@ -96,7 +97,7 @@ class OrangeNotes extends FallNotes {
       if (key == 'K') {
         if (loc.y >= height-space) {
           score+=1;
-                    life = 0;
+          life = 0;
         }
         else {
           score-=1;
@@ -106,7 +107,7 @@ class OrangeNotes extends FallNotes {
   }
 }
 
-class YellowNotes extends FallNotes { //Implicit super constructor is undefined for default constructor. Must define an explicit constructor. What does this mean?
+class YellowNotes extends FallNotes {
   YellowNotes(float x, float y) {
     super(x, y);
     c = 90;
@@ -117,10 +118,10 @@ class YellowNotes extends FallNotes { //Implicit super constructor is undefined 
     if (keyPressed) {    
 
       if (key == 'L' || key == 'l') { //try and change for all.
-print("I'm pressing the L key!  ");
+        print("I'm pressing the L key!  ");
         if (loc.y >= height-space) {
           score+=1;
-                    life = 0;
+          life = 0;
         }
         else {
           score-=1;

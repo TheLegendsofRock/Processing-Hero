@@ -1,5 +1,5 @@
 class Animals {
-  int angle = 0; //Working movement
+  int angle = 0; //Working movement. To do: try at 15, maybe.
   PImage ad, am, ab, rad, ram, rah, rab;
   PImage sd, sb, st, sf, sh, rsd, rsf, rsh, rst;
   PImage kb, kh, kd, kf, rkb, rkh, rkd, rkf;
@@ -7,7 +7,7 @@ class Animals {
     /*a is for ant, d is for head, b is for bottom (ant) or body (all others), 
      m is for middle (ant), h is for strumming hand, f is for fin (shark),
      t is for tail (shark), r is for rockin.*/
-    //Working: still need to add better movement
+    //Working: still need to add better movement. To do: add in the translate and angle changes. This should be really simple, guys, if you want to try it.
   }
   void load(Guitar guitar) {
     if (ant == true) {
@@ -65,7 +65,7 @@ class Animals {
       rkf.resize(0, 227);
     }
     //ADD TO OTHER
-       if (angle>=0) {
+    if (angle>=0) { //Working: Make sure this works. This will cause the angle to increase
       angle++;
       if (angle<=15) {
         angle--;
@@ -74,7 +74,8 @@ class Animals {
     for (int a = 0; a<=15; a++) {
       a = angle;
     }
-    for (int e = 15; e>=0; e--) {
+    for (int e = 15; e>=0; e--) { //Working: Issue: this is my attempt at getting the angle to decrease after reaching a certain point. 
+    //For a back and forth movement, though, it may be better to do something with the sine() function.
       e = angle;
     }
     if (angle<=15) {
@@ -134,9 +135,10 @@ class Animals {
       popMatrix(); //Working:check
       pushMatrix();
       translate( width/3+90, height/2 - 220);
-      rotate(radians(angle));
+      rotate(radians(angle)); //Working: To do: All: use this as a guide if you want to try and use angle to make body parts move. The hands should go up and down the fret, the arms should strum, and the heads should bob.
+     // at the least, instead of just some number 30, make it random(25,32) or something like that.
       image(ad, 0, 0);
-      popMatrix(); //okay, it's really creepy right now, but I'm just happy it's moving. Whoopie!
+      popMatrix();
       image(am, width/3, height/2 - 60);
     }
     if (shark == true) {

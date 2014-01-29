@@ -1,4 +1,5 @@
-//I guess I have to rename this. I hope this isn't a bad word. I think it's just a last name. Or a misspelling of guitar.
+//This class is just here so I will have a guitar image to display. 
+//Working: To do: Still need to make sure that all the guitars fit with the characters (right size, loc). I know that if (raco == true), that one works.
 class Guitar {
   PImage guke, gruke, gele, grele, gaco, graco, bg, flame;
   Guitar() {
@@ -12,14 +13,14 @@ class Guitar {
     grele.resize(250, 620);
     gaco = loadImage("acoustic_guitar.png");
     gaco.resize(240, 615);
-    graco = loadImage("brown_guit.png"); //ukes are about the height of the guitar body, but i made em a bit bigger.
+    graco = loadImage("brown_guit.png"); //ukes are about the height of the guitar body, but I made them a bit bigger.
     graco.resize(210, 630);
     bg = loadImage("guitar_bg.png"); 
     bg.resize(750, 800); //same size as the window.
     flame = loadImage("cute_flame.png");
     flame.resize(95, 115);
   }
-  void display() {
+  void display() { //Right now, this is not running, so disregard. The guitar class that matters is in the Processing_Hero folder.
     background(bg);
     image(gaco, 130, height/2);
     image(gele, width/2, height/2);

@@ -1,4 +1,3 @@
-//I guess I have to rename this. I hope this isn't a bad word. I think it's just a last name. Or a misspelling of guitar.
 class Guitar {
   PImage guke, gruke, gele, grele, gaco, graco, bg, flame;
   Guitar() {
@@ -28,10 +27,10 @@ class Guitar {
       if (mouseX>=30 && mouseX<=230) {
         image(flame, 130, height/2+50);
         if (mousePressed) {
-          aco = true;
-          sing = true;
-          numClicks = 0;
-          guit = false;
+          aco = true; //this acoustic guitar should display during game play.
+          sing = true; //should load song selection screen
+//          numClicks = 0;
+          guit = false; //should leave guitar screen
         }
       }
       if (mouseX>=width/2-100 && mouseX<=width/2+100) {
@@ -39,7 +38,7 @@ class Guitar {
         if (mousePressed) {
           ele = true;
           sing = true;
-          numClicks = 0;
+//          numClicks = 0;
           guit = false;
         }
       }
@@ -48,13 +47,13 @@ class Guitar {
         if (mousePressed) {
           uke = true;
           sing = true;
-          numClicks = 0;
+//          numClicks = 0;
           guit = false;
         }
       }
     }
   }
-  void extra() { //shows secret guitars. must hold down g to select.
+  void extra() { //shows secret guitars. must be holding down g to access and select. Same deal as the other ones otherwise.
     imageMode(CENTER);
     background(bg);
     image(graco, 130, height/2);
@@ -66,9 +65,8 @@ class Guitar {
         if (mousePressed) {
           raco = true;
           sing = true;
-          numClicks = 0;
-          
-          guit = false;
+//          numClicks = 0;
+                    guit = false;
         }
       }
       if (mouseX>=width/2-100 && mouseX<=width/2+100) {
@@ -76,7 +74,7 @@ class Guitar {
         if (mousePressed) {
           rele = true;
           sing = true;
-          numClicks = 0;
+//          numClicks = 0;
           guit = false;
         }
       }
@@ -85,7 +83,7 @@ class Guitar {
         if (mousePressed) {
           ruke = true;
           sing = true;
-          numClicks = 0;
+//          numClicks = 0;
           guit = false;
         }
       }

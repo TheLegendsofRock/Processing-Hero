@@ -1,4 +1,4 @@
-//Working: need to move all the silly willigan picturas into data and i really better be able to find them or else im gonna go even crazier. what's a midterm
+//Working: make all angle changes of this in game_play_test. It does not really matter in this folder.
 class Animals {
   int angle = 0; //Working movement
   PImage ad, am, ab, rad, ram, rah, rab;
