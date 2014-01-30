@@ -35,6 +35,7 @@ int index = 0;
 PImage pick;
 int numClicks;
 PImage tongue;
+boolean oldClicks;
 
 void setup() {
   background(0);
@@ -62,7 +63,7 @@ void setup() {
 }
 void draw() {
   println("start: " + start + "\nselect: " + select + "\nguit: " + guit + "\nsing: " + sing + "\npause: " + pause + "\nrun: "  + run + "\n\n\n");
-//println("x: " + mouseX + "\nY: " + mouseY);
+  //println("x: " + mouseX + "\nY: " + mouseY);
   //  if (numClicks >=0) { //Working: To do: will probably end up deleting all references to numClicks, because we are not using them.
   //    image(pick, pmouseX, pmouseY); //this was to get a guitar pick to follow around the mouse, but it ended up running at odd times and over any background, so probably will scrap that.
   //  }
@@ -85,11 +86,11 @@ void draw() {
       }
     }
   }
- else if (select == true) { //Character selection screen. Like album covers
+  else if (select == true) { //Character selection screen. Like album covers
     ion.display();
     ion.mouseOver(); //should enlarge when mouse over and make character boolean true when click on.
   }
- else if (guit == true) { //guitar selection screen.
+  else if (guit == true && !select) { //guitar selection screen.
     if (keyPressed) {
       if (key == 'g') {
         gui.extra(); //these are "secret" guitars. Same songs for them, though.
@@ -111,7 +112,14 @@ void draw() {
     wild.load();
     wild.play(); //these are the characters.
   }
+  if (mousePressed) {
+    oldClicks= true;
+  }
 }
+void mouseReleased() {
+  oldClicks= false;
+}
+
 
 void keyPressed() {
   if (run == true) { //This matters more for game_play_test. Don't pay any mind to it here.
@@ -135,14 +143,14 @@ void keyPressed() {
 void mousePressed() {//Working: To do: Issues: this does not work. The screens freeze up or do not change to display other ones.
   //To do: someone check to make sure the mouse locations make sense.
   //  numClicks += 1; //not like this matters.
-  if (select == false && start == true) { //get out of start screen, enter character selection
+  if (select == false && start == true && oldClicks == false) { //get out of start screen, enter character selection
     if (mouseX <= 290 && mouseX>= 70 && mouseY <= 620 && mouseY >= 460) {
       //      numClicks = 0; //try this for other booleans, but keep two in the if(). can just get rid of numClicks. go through code again.
       select = true;
       start = false;
     }
   }
-  else if (select == true && guit == false) { //leave character selection, access guitar selection.
+  else if (select == true && guit == false && oldClicks == false) { //leave character selection, access guitar selection.
     if (mouseY<= height/2+200 && mouseY>= height/2-200) {
       if (mouseX>=30 && mouseX<=230) {
         //        as.resize(250, 250); //gives me coordinate out of bounds. let's try another way.
@@ -171,7 +179,7 @@ void mousePressed() {//Working: To do: Issues: this does not work. The screens f
       }
     }
   }
-  else if (guit == true && sing == false) {//exit guitar selection, progress to song selection
+  else if (guit == true && sing == false && oldClicks == false) {//exit guitar selection, progress to song selection
     if (mouseY<= height/2+200 && mouseY>= height/2-200) {
       if (mouseX>=30 && mouseX<=230) {
         //          image(flame, 130, height/2+50);
@@ -202,7 +210,7 @@ void mousePressed() {//Working: To do: Issues: this does not work. The screens f
       }
     }
   }
-  else if (sing == true && run == false) {//abandon song selection, advance to game play. Note: the actual game code will not run here.
+  else if (sing == true && run == false && oldClicks == false) {//abandon song selection, advance to game play. Note: the actual game code will not run here.
     //The game code is being written within the game_play_test folder, but should be controlled by the same booleans.
     if (mouseY<=height-50 && mouseY>=50) {
       if (mouseX>width/2) {

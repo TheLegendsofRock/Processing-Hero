@@ -29,14 +29,14 @@ class Startscreen {
     //    noFill();
     //                 rect(width/8-20,height/2,835/3,219);
     //                 //the location I want for mouseX,Y stuff
-    if (mousePressed) {
+//    if (mousePressed) {
       //if you click "i wanna rock" the game will start
       //      if (mouseX <= width/2 && mouseX>= width/2-(835*3/4)/2 && mouseY <= height/1.5+219/2 && mouseY >= height/1.5-219/2) { 
       //As of right now, this is also in the Processing_Hero tab under void mousePressed. So I don't think it needs to be uncommented here.
       //        //      numClicks = 0;
       //        select = true;
       //        start = false;
-    }
+//    }
   }
 }
 

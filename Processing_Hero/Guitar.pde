@@ -26,30 +26,30 @@ class Guitar {
     if (mouseY<= height/2+200 && mouseY>= height/2-200) {
       if (mouseX>=30 && mouseX<=230) {
         image(flame, 130, height/2+50);
-        if (mousePressed) {
-          aco = true; //this acoustic guitar should display during game play.
-          sing = true; //should load song selection screen
-//          numClicks = 0;
-          guit = false; //should leave guitar screen
-        }
+//        if (mousePressed) {
+//          aco = true; //this acoustic guitar should display during game play.
+//          sing = true; //should load song selection screen
+////          numClicks = 0;
+//          guit = false; //should leave guitar screen
+//        }
       }
       if (mouseX>=width/2-100 && mouseX<=width/2+100) {
         image(flame, width/2, height/2+30);
-        if (mousePressed) {
-          ele = true;
-          sing = true;
-//          numClicks = 0;
-          guit = false;
-        }
+//        if (mousePressed) {
+//          ele = true;
+//          sing = true;
+////          numClicks = 0;
+//          guit = false;
+//        }
       }
       if (mouseX>=width-230 && mouseX<=width-30) {
         image(flame, width-130, height/2+25);
-        if (mousePressed) {
-          uke = true;
-          sing = true;
-//          numClicks = 0;
-          guit = false;
-        }
+//        if (mousePressed) {
+//          uke = true;
+//          sing = true;
+////          numClicks = 0;
+//          guit = false;
+//        }
       }
     }
   }
@@ -62,30 +62,30 @@ class Guitar {
     if (mouseY<= height/2+200 && mouseY>= height/2-200) {
       if (mouseX>=30 && mouseX<=230) {
         image(flame, 130, height/2+50);
-        if (mousePressed) {
-          raco = true;
-          sing = true;
-//          numClicks = 0;
-                    guit = false;
-        }
+//        if (mousePressed) {
+//          raco = true;
+//          sing = true;
+////          numClicks = 0;
+//                    guit = false;
+//        }
       }
       if (mouseX>=width/2-100 && mouseX<=width/2+100) {
         image(flame, width/2-40, height/2+30);
-        if (mousePressed) {
-          rele = true;
-          sing = true;
-//          numClicks = 0;
-          guit = false;
-        }
+//        if (mousePressed) {
+//          rele = true;
+//          sing = true;
+////          numClicks = 0;
+//          guit = false;
+//        }
       }
       if (mouseX>=width-230 && mouseX<=width-30) {
         image(flame, width-130, height/2+25);
-        if (mousePressed) {
-          ruke = true;
-          sing = true;
-//          numClicks = 0;
-          guit = false;
-        }
+//        if (mousePressed) {
+//          ruke = true;
+//          sing = true;
+////          numClicks = 0;
+//          guit = false;
+//        }
       }
     }
   }

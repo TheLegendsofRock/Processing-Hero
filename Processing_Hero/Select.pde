@@ -24,35 +24,34 @@ class Select { //select characters
       if (mouseX>=30 && mouseX<=230) {
         image(as, 130, height/2, 250, 250); //if mouse over, image enlarges.
 
-//Hey, Kristie, read this!
-//If this if statement runs while the mouse is still pressed, it will change the booleans
-         if (mousePressed) { //if select:
-          shark = true; //character will display during gameplay
-          guit = true; //guitar selection screen will load
-          //          numClicks = 0;
-          select = false; //character selection screen will not display.
-          //Working: Issues: To do: this is currently also being done under voide mousePressed in the Processing_Hero tab.
-          //May need to comment it all out here (except for the resizing pictures bit) to avoid redundancy.
-        }
-        
-       }
+        //Hey, Kristie, read this!
+        //If this if statement runs while the mouse is still pressed, it will change the booleans
+//        if (mousePressed) { //if select:
+//          shark = true; //character will display during gameplay
+//          guit = true; //guitar selection screen will load
+//          //          numClicks = 0;
+//          select = false; //character selection screen will not display.
+//          //Working: Issues: To do: this is currently also being done under voide mousePressed in the Processing_Hero tab.
+//          //May need to comment it all out here (except for the resizing pictures bit) to avoid redundancy.
+//        }
+      }
       if (mouseX>=width/2-100 && mouseX<=width/2+100) {
         image(ak, width/2, height/2, 250, 250);
-        if (mousePressed) {
-          koala = true;
-          guit = true;
-          //          numClicks = 0;
-          select = false;
-        }
+//        if (mousePressed) {
+//          koala = true;
+//          guit = true;
+//          //          numClicks = 0;
+//          select = false;
+//        }
       }
       if (mouseX>=width-230 && mouseX<=width-30) {
         image(aa, width-130, height/2, 250, 250);
-        if (mousePressed) {
-          ant = true;
-          guit = true;
-          //          numClicks = 0;
-          select = false;
-        }
+//        if (mousePressed) {
+//          ant = true;
+//          guit = true;
+//          //          numClicks = 0;
+//          select = false;
+//        }
       }
     }
   }
