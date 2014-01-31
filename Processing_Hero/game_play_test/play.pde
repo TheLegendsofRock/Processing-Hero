@@ -1,4 +1,5 @@
 class Play {
+  //originally, player = minim.loadFile() things.
   Play() {
     //    player.play(); //doesn't work
   }

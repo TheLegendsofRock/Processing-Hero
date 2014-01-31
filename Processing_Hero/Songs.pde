@@ -48,7 +48,7 @@ class Songs {
       } 
       if (mouseX<width/2) {
         image(white, width/4, height/2, 403, 400);
-        white.resize(603, 600);
+        image(white, width/2, height/2, 603, 600);
         //KRISTIE WORKING: image size, make sure the run works
 //        if (mousePressed) {
 //          song1 = true;

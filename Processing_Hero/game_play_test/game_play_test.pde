@@ -5,7 +5,7 @@ import ddf.minim.spi.*;
 import ddf.minim.signals.*;
 import ddf.minim.ugens.*;
 import ddf.minim.effects.*;
-// Minim minim;
+// Minim minim; //originally
 Minim CountOnMe; //To do: find a way to test this. It's not loading for me.
 Minim JohnnyBGoode;
 Minim IKnewTrouble;
@@ -18,7 +18,7 @@ AudioPlayer count;
 AudioPlayer goode;
 AudioPlayer trouble;
 AudioPlayer soul;
-//AudioPlayer player;
+//AudioPlayer player; //originally
 int score = 0; //ADD TO OTHER
 ArrayList<FallNotes> fallNotes = new ArrayList<FallNotes>(); //ADD TO OTHER
 Animals wild;
@@ -59,7 +59,7 @@ int randc;
 int randd;
 void setup() {
   //ADD TO when go back to start, player.rewind();
-  //  minim = new Minim(this);
+  //  minim = new Minim(this); //originally
   CountOnMe = new Minim(this); //recently added. I don't know if this will work.
   JohnnyBGoode = new Minim(this);
   IKnewTrouble = new Minim(this);
@@ -70,7 +70,11 @@ void setup() {
   goode = JohnnyBGoode.loadFile("Chuck Berry - Johnny B. Goode.mp3", 2048);
   trouble = IKnewTrouble.loadFile("Taylor Swift - I Knew You Were Trouble.mp3", 2048);
   soul = HeySoulSister.loadFile("Train - Hey, Soul Sister.mp3", 2048);
-  //    in = minim.getLineIn(Minim.STEREO, 512); //I don't know what any of this means. Emma, if you understand minim, please work on this.
+  /*originally, we defined player in the play class, 
+  [depending on which record was pressed in the songs class (in the other file)].
+  This caused song1 or song2 to be true, and guitar selection controlled the (r)aco, (r)ele, and (r)uke booleans.
+  However, by defining it there, it didn't work out too well, so we tried defining individual songs here.
+  */
   imageMode(CENTER);
   size(750, 700); //Working: change back later; 
   colorMode(HSB, width, 100, 100);
