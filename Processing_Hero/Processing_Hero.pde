@@ -105,8 +105,8 @@ void draw() {
   }
   else if (sing == true) { //song selection class. 
     //Issue: this is the one with the record pictures that isn't updating correctly with the mouse location.
-    songs.mouseOver();
     songs.display();
+    songs.mouseOver();
   }
   else if (run == true) { //will replace with pause class from game_play_test when combine them. Both codes should be functional, though, before we do that.
     wild.load();
